@@ -3,145 +3,187 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>BNS Section Lookup</title>
+  <title>Bharatiya Nyaya Sanhita - Section Search</title>
   <style>
     html { box-sizing: border-box; }
-    *,*:before,*:after { box-sizing: inherit; }
+    *, *:before, *:after { box-sizing: inherit; }
     body {
       font-family: 'Georgia', 'Times New Roman', serif;
       background: linear-gradient(120deg, #f9f5ee 0%, #efe0c5 70%, #d3c1a3 100%);
       color: #452715;
-      margin: 0; padding: 0 0 2.2rem 0;
+      margin: 0;
+      padding: 1rem 1rem 4rem 1rem;
       min-height: 100vh;
-      display: flex; flex-direction: column; align-items: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     h1 {
-      margin-top: 1.3em;
+      margin-top: 1rem;
       font-size: 2.25rem;
       color: #5b3423;
       font-weight: bold;
       letter-spacing: 0.04em;
       text-shadow: 0 1px 8px #f2dfc1;
       text-align: center;
-      line-height: 1.09;
-      margin-bottom: 0.2em;
+      line-height: 1.1;
+      margin-bottom: 0.4rem;
     }
-    .themed-box {
-      background: #fff6e8;
-      border: 2.2px solid #bb9a6a2e;
-      border-radius: 10px;
-      box-shadow: 0 2px 14px #7c5d4420;
-      margin-top: 1.1em;
-      width: 96vw;
-      max-width: 397px;
-      padding: 1.22em 1em 1em 1em;
-      margin-bottom: .8em;
+    .container {
+      background: #fff8e4;
+      border: 2px solid #bba76a3b;
+      border-radius: 12px;
+      box-shadow: 0 3px 16px rgba(107, 92, 45, 0.24);
+      max-width: 480px;
+      width: 100%;
+      padding: 1.6rem 1.3rem 1.3rem 1.3rem;
+      margin-bottom: 1rem;
     }
     input[type="text"] {
       width: 100%;
-      padding: 0.7em 1em;
-      border: 1.3px solid #beaa7b77;
-      border-radius: 7px;
-      font-size: 1.11em;
-      margin-bottom: .85em;
-      background: #fdf7ec;
+      padding: 0.75rem 1.2rem;
+      border-radius: 8px;
+      border: 1.5px solid #ad996864;
+      font-size: 1.12rem;
+      font-family: 'Georgia', serif;
       color: #422c14;
-      font-family: inherit;
-      letter-spacing: 0.03em;
+      margin-bottom: 1.1rem;
+      outline-offset: 1px;
+      background-color: #faf3db;
+      letter-spacing: 0.02em;
     }
     input[type="text"]:focus {
-      outline: 2px solid #7a5938;
-      background: #fcf6ed;
-      border-color: #946a3e;
+      border-color: #947c3a;
+      background-color: #fff8db;
+      outline: 2px solid #a6812a;
     }
-    .buttons-row {
-      display: flex; gap: 0.6em; margin-bottom: .7em; justify-content: center;
+    .button-row {
+      display: flex;
+      justify-content: center;
+      gap: 0.8rem;
+      margin-bottom: 1rem;
     }
     button {
-      flex: 0 0 44%;
-      min-width: 80px;
-      padding: 0.64em 0;
-      font-size: 1.04rem;
+      flex: 1 1 120px;
+      padding: 0.6rem 0;
       border: none;
-      border-radius: 7px;
+      border-radius: 8px;
       font-weight: 600;
+      font-size: 1rem;
       cursor: pointer;
-      background: #7a5938;
+      background-color: #7b5932;
       color: #fff;
-      transition: background 0.18s;
-      font-family: inherit;
-      letter-spacing: 0.03em;
+      font-family: 'Georgia', serif;
+      letter-spacing: 0.02em;
+      transition: background-color 0.2s;
       max-width: 160px;
     }
-    button:active { background: #5c4024; }
-    #clearBtn { background: #efd5b6; color: #634115; }
-    #clearBtn:active { background: #bfa173; color: #fff; }
+    button:active {
+      background-color: #5a421a;
+    }
+    #clearBtn {
+      background-color: #eddebd;
+      color: #6a5121;
+    }
+    #clearBtn:active {
+      background-color: #beaa71;
+      color: #fff;
+    }
+    #error {
+      color: #a92828;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 0.9rem;
+      font-family: 'Georgia', serif;
+    }
     .section-box {
-      background: #fffbeed2;
-      border-left: 4.5px solid #bb9a6a;
-      border-radius: 7px;
-      padding: 0.80em 0.7em 0.65em 0.8em;
-      margin-bottom: 1em;
-      box-shadow: 0 2px 8px #63341009;
-      font-size: 1em;
-      word-break: break-word;
-      overflow-wrap: break-word;
+      border-left: 5px solid #bcaa6b;
+      background-color: #fffdebcc;
+      box-shadow: 2px 2px 7px #bda96144;
+      padding: 1rem 1.1rem 0.7rem 1.2rem;
+      border-radius: 9px;
+      margin-bottom: 1.1rem;
+      line-height: 1.48;
+      font-size: 1rem;
+      color: #423219;
+      word-wrap: break-word;
+      font-family: 'Georgia', serif;
     }
-    .sect-num {
+    .section-title {
       font-weight: 800;
-      color: #ad7b40;
-      font-size: 1.01em;
-      margin-bottom: 0.12em;
-      font-family: inherit;
-      letter-spacing: 0.04em;
+      font-size: 1.17rem;
+      margin-bottom: 0.28rem;
+      color: #7a5f22;
+      letter-spacing: 0.035em;
+      font-family: 'Georgia', serif;
     }
-    .sect-title {
+    .section-header {
       font-weight: 700;
-      margin-left: .5em;
-      font-size: .99em;
-      color: #362009;
+      font-size: 1.02rem;
+      margin-bottom: 0.34rem;
+      color: #654d19;
+      font-family: 'Georgia', serif;
     }
-    .sect-body {
-      font-size: .99em;
-      color: #44311f;
-      margin: 0.68em 0 0 0;
-      line-height: 1.57;
-      font-family: inherit;
+    .section-description {
+      font-weight: 400;
+      font-size: 0.98rem;
+      color: #59492c;
       text-align: justify;
+      margin-bottom: 0.4rem;
+      white-space: pre-wrap;
+      font-family: 'Georgia', serif;
     }
-    .sect-points {
-      margin: 0.75em 0 0.1em 0.2em;
-      padding-left: 1.06em;
-      color: #5c4024;
-      font-size: 0.98em;
+    .section-points {
+      margin-left: 1.25rem;
+      list-style-type: disc;
+      color: #6a5131;
+      font-family: 'Georgia', serif;
+      font-size: 0.95rem;
     }
-    #error { margin-top:.85em; color:#b14e22; font-weight:500;text-align:center;font-size:.98em; }
+    .section-points li {
+      margin-bottom: 0.25rem;
+    }
     footer {
-      position:fixed;
-      left:0;
-      bottom:0;
-      width:100%;
-      text-align:center;
-      background:none;
-      padding:1.08em 0 1.02em 0;
-      font-size:1rem;
-      color:#000;
-      letter-spacing:0.06em;
-      z-index:10;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      padding: 0.85rem 0;
+      background: transparent;
+      font-size: 1rem;
+      color: #000;
+      letter-spacing: 0.06em;
+      font-family: 'Georgia', serif;
+      z-index: 9999;
     }
-    @media (max-width:480px) {
-      h1 { font-size: 1.22rem; }
-      .themed-box { padding: 0.76em 0.2em 1em 0.2em; max-width: 99vw; }
-      .section-box { padding: 0.66em 0.3em 0.5em 0.44em;font-size: 0.98em;}
-      button { font-size: .96rem; min-width:70px; }
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+      .container {
+        width: 90vw;
+        padding: 1.2rem 1rem 1rem 1rem;
+      }
+      button {
+        font-size: 0.95rem;
+        max-width: 130px;
+        padding: 0.5rem 0;
+      }
+      .section-title {
+        font-size: 1.05rem;
+      }
+      .section-description, .section-points {
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>📗 BNS Section Search</h1>
-  <div class="themed-box">
-    <input type="text" id="queryInput" placeholder="Section No. (e.g. 1)" autocomplete="off" />
-    <div class="buttons-row">
+  <h1>📚 Bharatiya Nyaya Sanhita Section Search</h1>
+  <div class="container">
+    <input id="queryInput" type="text" placeholder="Enter section number (e.g. 106)" autocomplete="off" />
+    <div class="button-row">
       <button id="clearBtn" type="button">Clear</button>
       <button id="searchBtn" type="button">Search</button>
     </div>
@@ -149,62 +191,82 @@
     <div id="results"></div>
   </div>
   <footer>Made with ❤️ by Sauravhhh</footer>
-<script>
-let bnsdb = {}; // new structure: object with act_info and chapters
-fetch('bns.json')
-  .then(r => r.json())
-  .then(data => { bnsdb = data; });
+  <script>
+    let bnsData = {};
 
-const searchBtn = document.getElementById('searchBtn');
-const clearBtn = document.getElementById('clearBtn');
-const queryInput = document.getElementById('queryInput');
-const results = document.getElementById('results');
-const errorDiv = document.getElementById('error');
+    fetch("bns.json")
+      .then((r) => r.json())
+      .then((data) => {
+        bnsData = data;
+      });
 
-function clearAll() {
-  queryInput.value = "";
-  results.innerHTML = "";
-  errorDiv.innerHTML = "";
-  queryInput.focus();
-}
-clearBtn.onclick = clearAll;
+    const searchBtn = document.getElementById("searchBtn");
+    const clearBtn = document.getElementById("clearBtn");
+    const queryInput = document.getElementById("queryInput");
+    const results = document.getElementById("results");
+    const errorDiv = document.getElementById("error");
 
-function searchBNSLaw() {
-  errorDiv.textContent = ""; results.innerHTML = "";
-  const q = queryInput.value.trim();
-  if(!q) { errorDiv.textContent = "Enter a section number."; return; }
-  if(!bnsdb.chapters) { errorDiv.textContent = "Database not loaded. Try again."; return; }
-
-  // Search all chapters and sections for the given section number
-  let found = null, chapterTitle = "";
-  for (const [chKey, chapter] of Object.entries(bnsdb.chapters)) {
-    const secKey = `section_${q}`;
-    if (chapter.sections_detail && chapter.sections_detail[secKey]) {
-      found = chapter.sections_detail[secKey];
-      chapterTitle = chapter.title ? chapter.title : chKey.replace('_',' ').toUpperCase();
-      break;
+    function clearAll() {
+      queryInput.value = "";
+      results.innerHTML = "";
+      errorDiv.innerHTML = "";
+      queryInput.focus();
     }
-  }
-  if (!found) {
-    results.innerHTML = "<div class='section-box'>No section found with number " + q + ".</div>";
-    return;
-  }
-  results.innerHTML = `
-    <div class="section-box">
-      <span class="sect-num">Section ${q}</span>
-      <span class="sect-title">${found.title || ''}</span>
-      <div style="color:#987134;font-size:.99em;margin:.35em 0 .25em 0;"><em>${chapterTitle}</em></div>
-      <div class="sect-body">${found.description || ""}</div>
-      ${
-        found.key_points && found.key_points.length
-        ? `<ul class="sect-points">${found.key_points.map(pt=>"<li>"+pt+"</li>").join('')}</ul>`
-        : ""
+    clearBtn.onclick = clearAll;
+
+    function searchBNS() {
+      errorDiv.textContent = "";
+      results.innerHTML = "";
+      let q = queryInput.value.trim();
+      if (!q) {
+        errorDiv.textContent = "Please enter a section number.";
+        return;
       }
-    </div>
-  `;
-}
-searchBtn.onclick = searchBNSLaw;
-queryInput.addEventListener('keyup', e => { if(e.key === "Enter") searchBNSLaw(); });
-</script>
+      if (!bnsData.chapters) {
+        errorDiv.textContent = "Database not loaded. Please try again later.";
+        return;
+      }
+
+      // Search chapters for section
+      let foundSection = null,
+        chapterTitle = "";
+      outer: for (let chapterKey in bnsData.chapters) {
+        let chapter = bnsData.chapters[chapterKey];
+        let sections = chapter.sections_detail;
+        if (sections && sections["section_" + q]) {
+          foundSection = sections["section_" + q];
+          chapterTitle = chapter.title || chapterKey.replace(/_/g, " ").toUpperCase();
+          break outer;
+        }
+      }
+
+      if (!foundSection) {
+        results.innerHTML = `<div class="section-box">No section found with number ${q}.</div>`;
+        return;
+      }
+
+      results.innerHTML = `
+        <div class="section-box">
+          <div class="section-title">Section ${q}: ${foundSection.title}</div>
+          <div class="section-header">${chapterTitle}</div>
+          <div class="section-description">${foundSection.description}</div>
+          ${
+            foundSection.key_points && foundSection.key_points.length > 0
+              ? `<ul class="section-points">${foundSection.key_points
+                  .map((pt) => `<li>${pt}</li>`)
+                  .join("")}</ul>`
+              : ""
+          }
+        </div>
+      `;
+    }
+
+    searchBtn.onclick = searchBNS;
+    queryInput.addEventListener("keyup", (e) => {
+      if (e.key === "Enter") {
+        searchBNS();
+      }
+    });
+  </script>
 </body>
 </html>
