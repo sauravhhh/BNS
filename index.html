@@ -109,6 +109,12 @@
       font-family: inherit;
       text-align: justify;
     }
+    .sect-points {
+      margin: 0.75em 0 0.1em 0.2em;
+      padding-left: 1.06em;
+      color: #5c4024;
+      font-size: 0.98em;
+    }
     #error { margin-top:.85em; color:#b14e22; font-weight:500;text-align:center;font-size:.98em; }
     footer {
       position:fixed;
@@ -134,7 +140,7 @@
 <body>
   <h1>📗 BNS Section Search</h1>
   <div class="themed-box">
-    <input type="text" id="queryInput" placeholder="Section No. (e.g. 106)" autocomplete="off" />
+    <input type="text" id="queryInput" placeholder="Section No. (e.g. 1)" autocomplete="off" />
     <div class="buttons-row">
       <button id="clearBtn" type="button">Clear</button>
       <button id="searchBtn" type="button">Search</button>
@@ -144,8 +150,7 @@
   </div>
   <footer>Made with ❤️ by Sauravhhh</footer>
 <script>
-// Load your local bns.json (must be in same folder) with fields: section, heading, text
-let bnsdb = [];
+let bnsdb = {}; // new structure: object with act_info and chapters
 fetch('bns.json')
   .then(r => r.json())
   .then(data => { bnsdb = data; });
@@ -168,23 +173,38 @@ function searchBNSLaw() {
   errorDiv.textContent = ""; results.innerHTML = "";
   const q = queryInput.value.trim();
   if(!q) { errorDiv.textContent = "Enter a section number."; return; }
-  if(!bnsdb.length) { errorDiv.textContent = "Database not loaded. Try again."; return; }
-  const matches = bnsdb.filter(sec => sec.section && sec.section === q);
-  if(matches.length === 0) {
+  if(!bnsdb.chapters) { errorDiv.textContent = "Database not loaded. Try again."; return; }
+
+  // Search all chapters and sections for the given section number
+  let found = null, chapterTitle = "";
+  for (const [chKey, chapter] of Object.entries(bnsdb.chapters)) {
+    const secKey = `section_${q}`;
+    if (chapter.sections_detail && chapter.sections_detail[secKey]) {
+      found = chapter.sections_detail[secKey];
+      chapterTitle = chapter.title ? chapter.title : chKey.replace('_',' ').toUpperCase();
+      break;
+    }
+  }
+  if (!found) {
     results.innerHTML = "<div class='section-box'>No section found with number " + q + ".</div>";
     return;
   }
-  results.innerHTML = matches.map(sec => `
+  results.innerHTML = `
     <div class="section-box">
-      <span class="sect-num">Section ${sec.section}</span>
-      <span class="sect-title">${sec.heading || ''}</span>
-      <div class="sect-body">${sec.text || ""}</div>
+      <span class="sect-num">Section ${q}</span>
+      <span class="sect-title">${found.title || ''}</span>
+      <div style="color:#987134;font-size:.99em;margin:.35em 0 .25em 0;"><em>${chapterTitle}</em></div>
+      <div class="sect-body">${found.description || ""}</div>
+      ${
+        found.key_points && found.key_points.length
+        ? `<ul class="sect-points">${found.key_points.map(pt=>"<li>"+pt+"</li>").join('')}</ul>`
+        : ""
+      }
     </div>
-  `).join('');
+  `;
 }
 searchBtn.onclick = searchBNSLaw;
 queryInput.addEventListener('keyup', e => { if(e.key === "Enter") searchBNSLaw(); });
 </script>
 </body>
-  </html>
-  
+</html>
