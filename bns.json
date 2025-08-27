@@ -1,0 +1,1406 @@
+{
+  "act_info": {
+    "title": "Bharatiya Nagarik Suraksha Sanhita",
+    "year": 2023,
+    "short_name": "BNS",
+    "replaces": "Indian Penal Code, 1860",
+    "total_sections": 358,
+    "total_chapters": 20,
+    "enforcement_date": "July 1, 2024"
+  },
+  "chapters": {
+    "chapter_1": {
+      "title": "General",
+      "sections": "1-2",
+      "sections_detail": {
+        "section_1": {
+          "title": "Short title and extent",
+          "description": "This Act may be called the Bharatiya Nagarik Suraksha Sanhita, 2023. It extends to the whole of India.",
+          "key_points": ["Defines the short title of the Act", "Establishes territorial jurisdiction over entire India"]
+        },
+        "section_2": {
+          "title": "Definitions",
+          "description": "Definitions of key terms used throughout the Act",
+          "key_points": [
+            "Person - includes any company or association",
+            "Public - includes any class of the public or any community",
+            "Wrongful gain/loss definitions",
+            "Dishonestly, fraudulently definitions",
+            "Injury - illegally causing harm to person, reputation or property"
+          ]
+        }
+      }
+    },
+    "chapter_2": {
+      "title": "Of Punishments",
+      "sections": "3-9",
+      "sections_detail": {
+        "section_3": {
+          "title": "Punishments",
+          "description": "Types of punishments under BNS",
+          "key_points": [
+            "Death penalty",
+            "Life imprisonment", 
+            "Simple or rigorous imprisonment",
+            "Forfeiture of property",
+            "Fine",
+            "Community service"
+          ]
+        },
+        "section_4": {
+          "title": "Commutation of sentence of death",
+          "description": "Provisions for commuting death sentence to life imprisonment",
+          "key_points": ["Government power to commute death sentence", "Conditions for commutation"]
+        },
+        "section_5": {
+          "title": "Sentence of imprisonment for life",
+          "description": "Life imprisonment means imprisonment for remainder of natural life",
+          "key_points": ["Life imprisonment definition", "Cannot be commuted to term imprisonment without government approval"]
+        },
+        "section_6": {
+          "title": "Description of imprisonment",
+          "description": "Classification of imprisonment types",
+          "key_points": ["Simple imprisonment", "Rigorous imprisonment with hard labour"]
+        },
+        "section_7": {
+          "title": "Amount of fine",
+          "description": "Provisions regarding fines",
+          "key_points": ["No limit on fine amount unless specified", "Court discretion in fine amount"]
+        },
+        "section_8": {
+          "title": "Sentence of fine",
+          "description": "Procedures for fine collection and default imprisonment",
+          "key_points": ["Fine recovery procedures", "Imprisonment in default of fine payment"]
+        },
+        "section_9": {
+          "title": "Community service",
+          "description": "New punishment of community service introduced",
+          "key_points": ["Alternative to imprisonment for certain offences", "Court discretion in awarding community service"]
+        }
+      }
+    },
+    "chapter_3": {
+      "title": "Of General Exceptions",
+      "sections": "10-26",
+      "sections_detail": {
+        "section_10": {
+          "title": "Nothing is an offence which is done by a person who is bound by law to do it",
+          "description": "Legal duty exception",
+          "key_points": ["Acts mandated by law are not offences", "Judicial and official duty protection"]
+        },
+        "section_11": {
+          "title": "Nothing is an offence which is done by a Judge when acting judicially",
+          "description": "Judicial immunity",
+          "key_points": ["Protection for judicial acts", "Good faith requirement"]
+        },
+        "section_12": {
+          "title": "Nothing is an offence which is done in the exercise of the right of private defence",
+          "description": "Private defence exception",
+          "key_points": ["Right to defend person and property", "Reasonable force limitation"]
+        },
+        "section_13": {
+          "title": "Consent",
+          "description": "Acts done with consent are generally not offences",
+          "key_points": ["Valid consent defence", "Exceptions for serious bodily harm", "Age and capacity requirements"]
+        },
+        "section_14": {
+          "title": "Act done by a person bound, or by mistake of fact believing himself bound, by law",
+          "description": "Mistake of law exception",
+          "key_points": ["Good faith compliance with law", "Reasonable belief in legal obligation"]
+        },
+        "section_15": {
+          "title": "Act of Judge when acting judicially",
+          "description": "Expanded judicial protection",
+          "key_points": ["Judicial acts protection", "Acting within jurisdiction"]
+        },
+        "section_16": {
+          "title": "Act done pursuant to the judgment or order of Court",
+          "description": "Court order compliance",
+          "key_points": ["Following court orders is not an offence", "Good faith execution"]
+        },
+        "section_17": {
+          "title": "Act done by a person justified, or by mistake of fact believing himself justified, by law",
+          "description": "Legal justification exception",
+          "key_points": ["Legal authority defence", "Reasonable belief in authority"]
+        },
+        "section_18": {
+          "title": "Accident",
+          "description": "Accidental acts exception",
+          "key_points": ["No criminal intent", "Unforeseeable consequences", "Due care requirement"]
+        },
+        "section_19": {
+          "title": "Act likely to cause harm, but done without criminal intent, and to prevent other harm",
+          "description": "Lesser harm prevention",
+          "key_points": ["Choosing lesser of two evils", "Good faith requirement", "Proportionality test"]
+        },
+        "section_20": {
+          "title": "Act of a child under seven years of age",
+          "description": "Absolute immunity for young children",
+          "key_points": ["Children under 7 cannot commit crimes", "Complete incapacity assumption"]
+        },
+        "section_21": {
+          "title": "Act of a child above seven and under twelve years of age of immature understanding",
+          "description": "Conditional immunity for older children",
+          "key_points": ["Maturity assessment required", "Understanding of consequences test"]
+        },
+        "section_22": {
+          "title": "Act of a person of unsound mind",
+          "description": "Mental incapacity exception",
+          "key_points": ["Unsound mind at time of act", "Inability to understand nature and consequences"]
+        },
+        "section_23": {
+          "title": "Act of a person who by reason of intoxication is incapable of knowing the nature of the act",
+          "description": "Involuntary intoxication exception",
+          "key_points": ["Involuntary intoxication only", "Incapacity to understand act", "Not applicable to voluntary intoxication"]
+        },
+        "section_24": {
+          "title": "Offence requiring a particular intent or knowledge committed by one who is intoxicated",
+          "description": "Intoxication and specific intent",
+          "key_points": ["Voluntary intoxication no excuse", "May negate specific intent in some cases"]
+        },
+        "section_25": {
+          "title": "Act not intended and not known to be likely to cause death or grievous hurt",
+          "description": "Lack of intention exception",
+          "key_points": ["No intent to cause serious harm", "Unforeseeability of consequences"]
+        },
+        "section_26": {
+          "title": "Act done in good faith for benefit of a person without consent",
+          "description": "Emergency medical treatment exception",
+          "key_points": ["Good faith requirement", "Benefit of person", "Emergency circumstances"]
+        }
+      }
+    },
+    "chapter_4": {
+      "title": "Of the Right of Private Defence",
+      "sections": "27-42",
+      "sections_detail": {
+        "section_27": {
+          "title": "Right of private defence of the body and of property",
+          "description": "Fundamental right to defend oneself and property",
+          "key_points": ["Self-defence right", "Property defence right", "Reasonable force requirement"]
+        },
+        "section_28": {
+          "title": "Right of private defence against the act of a person of unsound mind, etc.",
+          "description": "Defence against mentally incapacitated persons",
+          "key_points": ["Right exists even if attacker not criminally liable", "Same force limitations apply"]
+        },
+        "section_29": {
+          "title": "Acts against which there is no right of private defence",
+          "description": "Limitations on private defence",
+          "key_points": ["No defence against public servants acting in good faith", "No defence against legal acts"]
+        },
+        "section_30": {
+          "title": "Extent to which the right may be exercised",
+          "description": "Proportionality in private defence",
+          "key_points": ["Minimum force necessary", "Proportional response", "Avoid causing death if possible"]
+        },
+        "section_31": {
+          "title": "When the right of private defence of the body extends to causing death",
+          "description": "Circumstances justifying lethal force in self-defence",
+          "key_points": [
+            "Assault likely to cause death",
+            "Assault likely to cause grievous hurt",
+            "Sexual assault",
+            "Wrongful restraint to commit sexual assault"
+          ]
+        },
+        "section_32": {
+          "title": "When such right extends to causing any harm other than death",
+          "description": "Non-lethal force in self-defence",
+          "key_points": ["Any assault not covered by Section 31", "Proportional response requirement"]
+        },
+        "section_33": {
+          "title": "Commencement and continuance of the right of private defence of the body",
+          "description": "Timing of self-defence right",
+          "key_points": ["Begins when danger apprehended", "Continues until danger ceases"]
+        },
+        "section_34": {
+          "title": "When the right of private defence of property extends to causing death",
+          "description": "Lethal force in property defence",
+          "key_points": [
+            "Theft, robbery, mischief or house-trespass by night",
+            "Mischief by fire to dwelling or property",
+            "Theft, mischief or trespass with intention to cause death/grievous hurt"
+          ]
+        },
+        "section_35": {
+          "title": "When such right extends to causing any harm other than death",
+          "description": "Non-lethal force in property defence",
+          "key_points": ["Property crimes not covered by Section 34", "Reasonable force only"]
+        },
+        "section_36": {
+          "title": "Commencement and continuance of the right of private defence of property",
+          "description": "Timing of property defence right",
+          "key_points": ["When property in danger", "Until danger to property ceases"]
+        }
+      }
+    },
+    "chapter_5": {
+      "title": "Of Abetment",
+      "sections": "43-52",
+      "sections_detail": {
+        "section_43": {
+          "title": "Abetment",
+          "description": "Definition of abetment - assisting in commission of offence",
+          "key_points": [
+            "Instigating person to commit offence",
+            "Engaging in conspiracy to commit offence", 
+            "Intentionally aiding commission of offence"
+          ]
+        },
+        "section_44": {
+          "title": "Abettor",
+          "description": "Person who abets commission of an offence",
+          "key_points": ["One who instigates, conspires or aids", "Liable as abettor"]
+        },
+        "section_45": {
+          "title": "Abetment of offence by the public or by more than ten persons",
+          "description": "Mass abetment provisions",
+          "key_points": ["Public abetment", "Abetment by more than 10 persons", "Enhanced punishment"]
+        },
+        "section_46": {
+          "title": "Punishment of abetment if the act abetted is committed",
+          "description": "Punishment when abetted offence is committed",
+          "key_points": ["Same punishment as principal offender", "Joint liability principle"]
+        },
+        "section_47": {
+          "title": "Punishment of abetment of offences punishable with death or life imprisonment",
+          "description": "Abetment of serious offences",
+          "key_points": ["Death sentence - imprisonment for life", "Life imprisonment - imprisonment up to 14 years"]
+        },
+        "section_48": {
+          "title": "Punishment of abetment if the person abetted does an act with a different intention",
+          "description": "When abetted person acts differently",
+          "key_points": ["Abettor liable for intended consequence", "Different intention by principal"]
+        },
+        "section_49": {
+          "title": "Punishment of abetment if the act causing harm different from that intended",
+          "description": "Unintended consequences of abetment",
+          "key_points": ["Liability for actual harm caused", "Knowledge requirement"]
+        },
+        "section_50": {
+          "title": "Punishment of abetment if abettor or person abetted is a public servant",
+          "description": "Enhanced punishment for public servant involvement",
+          "key_points": ["Public servant as abettor", "Public servant as abetted", "Enhanced penalties"]
+        },
+        "section_51": {
+          "title": "Abetment of assault by soldier, sailor or airman",
+          "description": "Abetment involving armed forces personnel",
+          "key_points": ["Military personnel assault", "Specific provisions for armed forces"]
+        },
+        "section_52": {
+          "title": "Abetment of mutiny or attempting to seduce a soldier, sailor or airman",
+          "description": "Sedition of armed forces",
+          "key_points": ["Mutiny abetment", "Seducing military personnel", "Punishment: life imprisonment or 10 years imprisonment with fine"]
+        }
+      }
+    },
+    "chapter_6": {
+      "title": "Of Criminal Conspiracy",
+      "sections": "53-54",
+      "sections_detail": {
+        "section_53": {
+          "title": "Criminal conspiracy",
+          "description": "Agreement to commit illegal act or legal act by illegal means",
+          "key_points": [
+            "Agreement between two or more persons",
+            "To commit illegal act or legal act by illegal means",
+            "Mere agreement constitutes conspiracy",
+            "Punishment: 6 months imprisonment or fine or both"
+          ]
+        },
+        "section_54": {
+          "title": "Punishment for criminal conspiracy",
+          "description": "Enhanced punishment for serious conspiracies",
+          "key_points": [
+            "Death/life imprisonment conspiracies: life imprisonment or 10 years + fine",
+            "Other serious offences: same punishment as substantive offence",
+            "General conspiracy: 6 months or fine or both"
+          ]
+        }
+      }
+    },
+    "chapter_7": {
+      "title": "Of Offences Against the State",
+      "sections": "55-70",
+      "sections_detail": {
+        "section_55": {
+          "title": "Waging war against Government of India",
+          "description": "Most serious offence against the state",
+          "key_points": ["Death penalty or life imprisonment", "Forfeiture of property", "Includes attempt to wage war"]
+        },
+        "section_56": {
+          "title": "Conspiracy to commit offences punishable by section 55",
+          "description": "Conspiracy to wage war",
+          "key_points": ["Life imprisonment or imprisonment up to 10 years", "Fine may be imposed"]
+        },
+        "section_57": {
+          "title": "Collecting arms, etc., with intention of waging war",
+          "description": "Preparation for waging war",
+          "key_points": ["Life imprisonment or 10 years imprisonment", "Fine in addition", "Collecting arms with seditious intent"]
+        },
+        "section_58": {
+          "title": "Concealing with intent to facilitate design to wage war",
+          "description": "Concealing plans of war against government",
+          "key_points": ["10 years imprisonment with fine", "Knowledge of war plans", "Concealment to facilitate"]
+        },
+        "section_59": {
+          "title": "Assaulting President, Governor, etc.",
+          "description": "Assault on constitutional authorities",
+          "key_points": ["7 years imprisonment with fine", "Covers President, Governor, and other specified authorities"]
+        },
+        "section_60": {
+          "title": "Sedition",
+          "description": "Actions to bring hatred or disaffection towards government",
+          "key_points": [
+            "Exciting disaffection towards Government of India",
+            "Life imprisonment or 3 years imprisonment with fine", 
+            "Explanation clarifies lawful criticism is not sedition"
+          ]
+        },
+        "section_61": {
+          "title": "Imputations, assertions prejudicial to national integration",
+          "description": "Statements harmful to national unity",
+          "key_points": ["3 years imprisonment or fine or both", "Promoting enmity between groups", "Prejudicial to national integration"]
+        },
+        "section_62": {
+          "title": "Acts endangering sovereignty, unity and integrity of India",
+          "description": "Broader offence against national integrity",
+          "key_points": ["7 years imprisonment or fine or both", "Questioning territorial integrity", "Secession activities"]
+        }
+      }
+    },
+    "chapter_8": {
+      "title": "Of Offences Relating to the Army, Navy and Air Force",
+      "sections": "71-76",
+      "sections_detail": {
+        "section_71": {
+          "title": "Abetting mutiny, or attempting to seduce a soldier, sailor or airman from his duty",
+          "description": "Sedition of armed forces personnel",
+          "key_points": ["Life imprisonment or 10 years with fine", "Attempting to seduce from duty", "Mutiny abetment"]
+        },
+        "section_72": {
+          "title": "Abetment of mutiny, if mutiny is committed",
+          "description": "When actual mutiny occurs",
+          "key_points": ["Death penalty or life imprisonment with fine", "Forfeiture of property", "Enhanced punishment for successful mutiny"]
+        },
+        "section_73": {
+          "title": "Abetment of assault by soldier, sailor or airman on his superior officer",
+          "description": "Inciting assault on superior officers",
+          "key_points": ["3 years imprisonment with fine", "Assault on superior officer", "Military hierarchy protection"]
+        },
+        "section_74": {
+          "title": "Abetment of desertion of soldier, sailor or airman",
+          "description": "Encouraging desertion from armed forces",
+          "key_points": ["2 years imprisonment or fine or both", "Desertion abetment", "Military discipline"]
+        },
+        "section_75": {
+          "title": "Harbouring deserter",
+          "description": "Sheltering military deserters",
+          "key_points": ["2 years imprisonment or fine or both", "Knowledge of deserter status", "Continuing to harbour"]
+        },
+        "section_76": {
+          "title": "Deserter concealed on board merchant vessel through negligence of master",
+          "description": "Negligence by ship masters",
+          "key_points": ["Fine of Rs. 3000", "Negligence in checking", "Merchant vessel responsibility"]
+        }
+      }
+    },
+    "chapter_9": {
+      "title": "Of Offences Against Public Tranquillity",
+      "sections": "77-91",
+      "sections_detail": {
+        "section_77": {
+          "title": "Unlawful assembly",
+          "description": "Assembly of 5 or more persons with common object",
+          "key_points": [
+            "5 or more persons with common unlawful object",
+            "6 months imprisonment or fine or both",
+            "Various unlawful objects specified"
+          ]
+        },
+        "section_78": {
+          "title": "Rioting",
+          "description": "When unlawful assembly uses force",
+          "key_points": ["Use of force or violence by unlawful assembly", "2 years imprisonment or fine or both"]
+        },
+        "section_79": {
+          "title": "Rioting, armed with deadly weapon",
+          "description": "Rioting with weapons",
+          "key_points": ["3 years imprisonment or fine or both", "Deadly weapons involvement", "Enhanced punishment"]
+        },
+        "section_80": {
+          "title": "Punishment for rioting",
+          "description": "General punishment for riot participation",
+          "key_points": ["2 years imprisonment or fine or both", "All riot members liable"]
+        },
+        "section_81": {
+          "title": "Joining unlawful assembly armed with deadly weapon",
+          "description": "Armed participation in unlawful assembly",
+          "key_points": ["2 years imprisonment or fine or both", "Possession of deadly weapon", "Intent to use weapon"]
+        },
+        "section_82": {
+          "title": "Unlawful assembly or rioting in place of worship, etc.",
+          "description": "Communal disturbances",
+          "key_points": ["5 years imprisonment with fine", "Place of worship", "Educational institution", "Enhanced punishment"]
+        },
+        "section_83": {
+          "title": "Affray",
+          "description": "Fighting in public place",
+          "key_points": ["1 month imprisonment or fine up to Rs. 1000 or both", "Fighting in public", "Disturbing peace"]
+        },
+        "section_84": {
+          "title": "Promoting enmity between different groups",
+          "description": "Communal harmony offences",
+          "key_points": [
+            "3 years imprisonment or fine or both",
+            "Promoting enmity on grounds of religion, race, caste, etc.",
+            "Enhanced punishment in place of worship"
+          ]
+        },
+        "section_85": {
+          "title": "Imputations, assertions prejudicial to national integration",
+          "description": "Statements against national unity",
+          "key_points": ["3 years imprisonment or fine or both", "Prejudicial assertions", "National integration"]
+        }
+      }
+    },
+    "chapter_10": {
+      "title": "Of Offences by or Relating to Public Servants",
+      "sections": "92-115",
+      "sections_detail": {
+        "section_92": {
+          "title": "Public servant taking gratification other than legal remuneration",
+          "description": "Bribery by public servants",
+          "key_points": ["3 years to life imprisonment with fine", "Taking illegal gratification", "Corruption offence"]
+        },
+        "section_93": {
+          "title": "Taking gratification in order to influence public servant by corrupt or illegal means",
+          "description": "Indirect bribery",
+          "key_points": ["3 years to life with fine", "Influencing other public servants", "Corrupt means"]
+        },
+        "section_94": {
+          "title": "Taking gratification for exercise of personal influence with public servant",
+          "description": "Trading in influence",
+          "key_points": ["3 years imprisonment with fine", "Using personal influence", "Corruption through influence"]
+        },
+        "section_95": {
+          "title": "Punishment for abetment of offences under sections 92 to 94",
+          "description": "Abetting corruption",
+          "key_points": ["Same punishment as principal offence", "Abetment of bribery", "Joint liability"]
+        },
+        "section_96": {
+          "title": "Public servant obtaining any valuable thing, without consideration or for inadequate consideration",
+          "description": "Assets disproportionate to known sources",
+          "key_points": ["3 years imprisonment with fine", "Disproportionate assets", "Unexplained wealth"]
+        },
+        "section_97": {
+          "title": "Public servant disobeying direction of law",
+          "description": "Wilful disobedience by public servant",
+          "key_points": ["1 year imprisonment or fine or both", "Wilful disobedience", "Direction of law"]
+        },
+        "section_98": {
+          "title": "Public servant framing incorrect document with intent to cause injury",
+          "description": "Fabrication of documents",
+          "key_points": ["3 years imprisonment with fine", "Incorrect documents", "Intent to cause injury"]
+        },
+        "section_99": {
+          "title": "Public servant unlawfully engaging in trade",
+          "description": "Conflict of interest",
+          "key_points": ["1 year imprisonment or fine or both", "Unlawful trade", "Conflict of interest"]
+        },
+        "section_100": {
+          "title": "Public servant in judicial proceeding corruptly making report, etc., contrary to law",
+          "description": "Judicial corruption",
+          "key_points": ["7 years imprisonment with fine", "Corrupt judicial acts", "False reports"]
+        }
+      }
+    },
+    "chapter_11": {
+      "title": "Of Contempts of the Lawful Authority of Public Servants",
+      "sections": "116-130",
+      "sections_detail": {
+        "section_116": {
+          "title": "Voluntarily obstructing public servant in discharge of public functions",
+          "description": "Obstruction of official duty",
+          "key_points": ["3 months imprisonment or fine up to Rs. 2500 or both", "Obstruction of public servant", "Discharge of functions"]
+        },
+        "section_117": {
+          "title": "Omission to assist public servant when bound by law to give assistance",
+          "description": "Failure to assist when legally required",
+          "key_points": ["1 month imprisonment or fine up to Rs. 1000 or both", "Legal obligation to assist", "Wilful omission"]
+        },
+        "section_118": {
+          "title": "Disobedience to order duly promulgated by public servant",
+          "description": "Disobedience of lawful orders",
+          "key_points": ["1 month imprisonment or fine up to Rs. 1000 or both", "Lawful orders", "Wilful disobedience"]
+        },
+        "section_119": {
+          "title": "Resistance or obstruction to lawful apprehension",
+          "description": "Resisting arrest",
+          "key_points": ["2 years imprisonment or fine or both", "Lawful apprehension", "Physical resistance"]
+        },
+        "section_120": {
+          "title": "Escape from custody or rescue",
+          "description": "Escaping from legal custody",
+          "key_points": ["2 years imprisonment or fine or both", "Lawful custody", "Escape or rescue"]
+        },
+        "section_121": {
+          "title": "Resistance or obstruction in lawful discharge of duty of public servant, or any other person",
+          "description": "General obstruction of duty",
+          "key_points": ["6 months imprisonment or fine up to Rs. 2500 or both", "Obstruction of duty", "Any person assisting public servant"]
+        }
+      }
+    },
+    "chapter_12": {
+      "title": "Of False Evidence and Offences Against Public Justice",
+      "sections": "131-168",
+      "sections_detail": {
+        "section_131": {
+          "title": "Perjury",
+          "description": "False statement on oath in judicial proceeding",
+          "key_points": ["7 years imprisonment with fine", "False statement under oath", "Judicial proceeding"]
+        },
+        "section_132": {
+          "title": "Fabricating false evidence",
+          "description": "Creating false evidence",
+          "key_points": ["3 years imprisonment with fine", "Making false evidence", "Intent to use in legal proceeding"]
+        },
+        "section_133": {
+          "title": "Giving false evidence",
+          "description": "Presenting false evidence",
+          "key_points": ["7 years imprisonment with fine", "False evidence in judicial proceeding", "Knowledge of falsity"]
+        },
+        "section_134": {
+          "title": "Fabricating false evidence with intent to procure conviction of capital offence",
+          "description": "False evidence in capital cases",
+          "key_points": ["Life imprisonment or 10 years with fine", "Capital offence cases", "Intent to procure conviction"]
+        },
+        "section_135": {
+          "title": "Giving or fabricating false evidence with intent to procure conviction of offence punishable with life imprisonment or imprisonment for seven years or upwards",
+          "description": "False evidence in serious cases",
+          "key_points": ["7 years imprisonment with fine", "Serious offences", "Enhanced punishment"]
+        },
+        "section_136": {
+          "title": "Using evidence known to be false",
+          "description": "Using known false evidence",
+          "key_points": ["Same punishment as giving false evidence", "Knowledge of falsity", "Use in proceeding"]
+        },
+        "section_137": {
+          "title": "Issuing or signing false certificate",
+          "description": "False certification by authorized persons",
+          "key_points": ["2 years imprisonment or fine or both", "False certificates", "Authorized persons"]
+        },
+        "section_138": {
+          "title": "Using as true a certificate known to be false",
+          "description": "Using false certificates",
+          "key_points": ["Same punishment as issuing false certificate", "Knowledge of falsity", "Using as genuine"]
+        }
+      }
+    },
+    "chapter_13": {
+      "title": "Of Offences Relating to Coin and Government Stamps",
+      "sections": "169-187",
+      "sections_detail": {
+        "section_169": {
+          "title": "Counterfeiting coin",
+          "description": "Making fake currency",
+          "key_points": ["10 years imprisonment with fine", "Counterfeiting Indian coin", "Making false coin"]
+        },
+        "section_170": {
+          "title": "Making or selling instrument for counterfeiting coin",
+          "description": "Tools for counterfeiting",
+          "key_points": ["3 years imprisonment with fine", "Instruments for counterfeiting", "Making or selling"]
+        },
+        "section_171": {
+          "title": "Making or selling instrument for counterfeiting Indian coin",
+          "description": "Specific tools for Indian currency",
+          "key_points": ["10 years imprisonment with fine", "Indian coin counterfeiting tools", "Enhanced punishment"]
+        },
+        "section_172": {
+          "title": "Possession of instrument or material for purpose of using the same for counterfeiting coin",
+          "description": "Possession of counterfeiting materials",
+          "key_points": ["3 years imprisonment with fine", "Counterfeiting materials", "Intent to use"]
+        },
+        "section_173": {
+          "title": "Counterfeiting currency-notes or bank-notes",
+          "description": "Fake currency notes",
+          "key_points": ["Life imprisonment or 10 years with fine", "Currency notes", "Bank notes"]
+        },
+        "section_174": {
+          "title": "Using as genuine, forged or counterfeit currency-notes or bank-notes",
+          "description": "Circulating fake currency",
+          "key_points": ["Life imprisonment or 10 years with fine", "Using fake notes", "Knowledge of falsity"]
+        },
+        "section_175": {
+          "title": "Possession of forged or counterfeit currency-notes or bank-notes",
+          "description": "Having fake currency",
+          "key_points": ["7 years imprisonment with fine", "Possession of fake notes", "Intent to use as genuine"]
+        },
+        "section_176": {
+          "title": "Making or possessing instruments or materials for forging or counterfeiting currency-notes or bank-notes",
+          "description": "Tools for currency counterfeiting",
+          "key_points": ["Life imprisonment or 10 years with fine", "Counterfeiting instruments", "Materials for fake currency"]
+        },
+        "section_177": {
+          "title": "Effacing writing from substance bearing Government stamp, or removing from document a stamp used for it, with intent to cause loss to Government",
+          "description": "Tampering with government stamps",
+          "key_points": ["3 years imprisonment with fine", "Removing stamps", "Intent to cause government loss"]
+        },
+        "section_178": {
+          "title": "Using Government stamp known to have been before used",
+          "description": "Reusing government stamps",
+          "key_points": ["2 years imprisonment or fine or both", "Previously used stamps", "Knowledge of prior use"]
+        },
+        "section_179": {
+          "title": "Erasure of mark denoting that stamp has been used",
+          "description": "Erasing cancellation marks",
+          "key_points": ["3 years imprisonment with fine", "Erasing used marks", "Intent to reuse"]
+        }
+      }
+    },
+    "chapter_14": {
+      "title": "Of Offences Relating to Weights and Measures",
+      "sections": "188-191",
+      "sections_detail": {
+        "section_188": {
+          "title": "Using false weight or measure",
+          "description": "Fraudulent use of incorrect weights/measures",
+          "key_points": ["1 year imprisonment or fine or both", "False weights or measures", "Fraudulent use"]
+        },
+        "section_189": {
+          "title": "Making or selling false weight or measure",
+          "description": "Manufacturing fake weights/measures",
+          "key_points": ["1 year imprisonment with fine", "Making false weights", "Selling false measures"]
+        },
+        "section_190": {
+          "title": "Being in possession of false weight or measure",
+          "description": "Possessing incorrect weights/measures",
+          "key_points": ["1 year imprisonment with fine", "Possession of false weights", "Knowledge of falsity"]
+        },
+        "section_191": {
+          "title": "Making or selling instrument for weighing designed to deceive",
+          "description": "Deceptive weighing instruments",
+          "key_points": ["1 year imprisonment with fine", "Deceptive instruments", "Designed to cheat"]
+        }
+      }
+    },
+    "chapter_15": {
+      "title": "Of Offences Affecting the Human Body",
+      "sections": "192-358",
+      "subsections": {
+        "culpable_homicide_murder": {
+          "title": "Of Culpable Homicide and Murder",
+          "sections": "192-220",
+          "sections_detail": {
+            "section_192": {
+              "title": "Culpable homicide",
+              "description": "Causing death by doing act with knowledge it's likely to cause death",
+              "key_points": ["Basic definition of culpable homicide", "Knowledge or intention to cause death", "Without legal justification"]
+            },
+            "section_193": {
+              "title": "Murder",
+              "description": "Culpable homicide amounting to murder",
+              "key_points": [
+                "Intention to cause death",
+                "Intention to cause bodily injury likely to cause death",
+                "Knowledge that act is imminently dangerous to life",
+                "Death penalty or life imprisonment with fine"
+              ]
+            },
+            "section_194": {
+              "title": "Culpable homicide not amounting to murder",
+              "description": "Lesser form of culpable homicide",
+              "key_points": [
+                "Life imprisonment or 10 years with fine",
+                "Exception cases from murder",
+                "Provocation, sudden fight, etc."
+              ]
+            },
+            "section_195": {
+              "title": "Causing death by negligence",
+              "description": "Death caused by negligent act",
+              "key_points": ["2 years imprisonment or fine or both", "No criminal intent", "Negligent act causing death"]
+            },
+            "section_196": {
+              "title": "Causing death by rash or negligent act not amounting to culpable homicide",
+              "description": "Rash act causing death",
+              "key_points": ["5 years imprisonment with fine", "Rash or negligent act", "Not amounting to culpable homicide"]
+            },
+            "section_197": {
+              "title": "Attempt to murder",
+              "description": "Attempting to commit murder",
+              "key_points": ["10 years imprisonment with fine", "Life imprisonment if hurt caused", "Attempt to commit murder"]
+            },
+            "section_198": {
+              "title": "Attempt to commit culpable homicide",
+              "description": "Attempting culpable homicide",
+              "key_points": ["3 years imprisonment with fine", "7 years if hurt caused", "Attempt to commit culpable homicide"]
+            }
+          }
+        },
+        "hurt_grievous_hurt": {
+          "title": "Of Hurt and Grievous Hurt",
+          "sections": "221-237",
+          "sections_detail": {
+            "section_221": {
+              "title": "Voluntarily causing hurt",
+              "description": "Intentionally causing bodily pain, disease or infirmity",
+              "key_points": ["1 year imprisonment or fine up to Rs. 5000 or both", "Voluntary hurt", "Bodily pain or injury"]
+            },
+            "section_222": {
+              "title": "Voluntarily causing grievous hurt",
+              "description": "Causing serious bodily injury",
+              "key_points": [
+                "7 years imprisonment with fine",
+                "Emasculation, permanent disfiguration",
+                "Fracture or dislocation of bone",
+                "Tooth or nail injury",
+                "Powers of limb or organ"
+              ]
+            },
+            "section_223": {
+              "title": "Voluntarily causing hurt by dangerous weapons or means",
+              "description": "Hurt caused by weapons",
+              "key_points": ["3 years imprisonment with fine", "Dangerous weapons or means", "Enhanced punishment"]
+            },
+            "section_224": {
+              "title": "Voluntarily causing grievous hurt by dangerous weapons or means",
+              "description": "Grievous hurt by weapons",
+              "key_points": ["Life imprisonment or 10 years with fine", "Dangerous weapons", "Serious injury by weapons"]
+            },
+            "section_225": {
+              "title": "Act endangering life or personal safety of others",
+              "description": "Reckless endangerment",
+              "key_points": ["3 months imprisonment or fine up to Rs. 1000 or both", "Endangering life", "Reckless act"]
+            }
+          }
+        },
+        "sexual_offences": {
+          "title": "Of Sexual Offences",
+          "sections": "238-252",
+          "sections_detail": {
+            "section_238": {
+              "title": "Rape",
+              "description": "Sexual intercourse without consent",
+              "key_points": [
+                "Rigorous imprisonment not less than 10 years, may extend to life",
+                "Fine in addition",
+                "Consent definition included",
+                "Various circumstances constituting rape"
+              ]
+            },
+            "section_239": {
+              "title": "Sexual intercourse by husband upon his wife during separation",
+              "description": "Marital rape during separation",
+              "key_points": ["2 years imprisonment with fine", "Living separately", "Without consent"]
+            },
+            "section_240": {
+              "title": "Rape in certain circumstances",
+              "description": "Aggravated rape",
+              "key_points": [
+                "Police officer, public servant, etc.",
+                "Rigorous imprisonment not less than 10 years to life",
+                "Enhanced punishment for position of authority"
+              ]
+            },
+            "section_241": {
+              "title": "Gang rape",
+              "description": "Rape by group of persons",
+              "key_points": [
+                "Rigorous imprisonment not less than 20 years to life or death",
+                "Fine to victim compensation",
+                "Multiple persons involvement"
+              ]
+            },
+            "section_242": {
+              "title": "Rape on woman under sixteen years of age",
+              "description": "Statutory rape of minor",
+              "key_points": [
+                "Rigorous imprisonment not less than 20 years to life or death",
+                "Under 16 years",
+                "Irrespective of consent"
+              ]
+            },
+            "section_243": {
+              "title": "Sexual intercourse by person in authority",
+              "description": "Abuse of authority for sexual intercourse",
+              "key_points": ["5-10 years rigorous imprisonment with fine", "Position of authority", "Abuse of power"]
+            },
+            "section_244": {
+              "title": "Assault or criminal force to woman with intent to outrage her modesty",
+              "description": "Outraging modesty of woman",
+              "key_points": ["1-5 years imprisonment with fine", "Intent to outrage modesty", "Assault or criminal force"]
+            },
+            "section_245": {
+              "title": "Sexual harassment",
+              "description": "Unwelcome sexual behavior",
+              "key_points": [
+                "1-3 years imprisonment with fine",
+                "Unwelcome sexual behavior",
+                "Physical contact, sexually colored remarks, etc."
+              ]
+            },
+            "section_246": {
+              "title": "Assault or criminal force to woman with intent to disrobe",
+              "description": "Forced disrobing of woman",
+              "key_points": ["3-7 years imprisonment with fine", "Intent to disrobe", "Assault or criminal force"]
+            },
+            "section_247": {
+              "title": "Voyeurism",
+              "description": "Watching or capturing private acts",
+              "key_points": [
+                "1-3 years imprisonment with fine",
+                "First conviction: 1-3 years",
+                "Subsequent conviction: 3-7 years",
+                "Watching private acts without consent"
+              ]
+            },
+            "section_248": {
+              "title": "Stalking",
+              "description": "Following or contacting despite clear indication of disinterest",
+              "key_points": [
+                "First conviction: 3 years imprisonment with fine",
+                "Subsequent conviction: 5 years with fine",
+                "Following, contacting, attempting to contact"
+              ]
+            }
+          }
+        },
+        "kidnapping_abduction": {
+          "title": "Of Kidnapping, Abduction and Trafficking",
+          "sections": "253-273",
+          "sections_detail": {
+            "section_253": {
+              "title": "Kidnapping",
+              "description": "Taking person from lawful guardianship",
+              "key_points": [
+                "From India or from lawful guardianship",
+                "Minor from lawful guardian",
+                "7 years imprisonment with fine"
+              ]
+            },
+            "section_254": {
+              "title": "Kidnapping from India",
+              "description": "Taking person out of India against will",
+              "key_points": ["7 years imprisonment with fine", "Conveying out of India", "Against person's will"]
+            },
+            "section_255": {
+              "title": "Kidnapping from lawful guardianship",
+              "description": "Taking minor from guardian",
+              "key_points": [
+                "7 years imprisonment with fine", 
+                "Male under 16 or female under 18",
+                "From lawful guardian without consent"
+              ]
+            },
+            "section_256": {
+              "title": "Abduction",
+              "description": "Inducing person to go from place by force or deceit",
+              "key_points": ["7 years imprisonment with fine", "Force or deceit", "Inducing to go from place"]
+            },
+            "section_257": {
+              "title": "Kidnapping or abducting in order to murder",
+              "description": "Kidnapping with intent to murder",
+              "key_points": ["Life imprisonment or 10 years with fine", "Intent to murder", "Enhanced punishment"]
+            },
+            "section_258": {
+              "title": "Kidnapping or abducting with intent to cause wrongful confinement",
+              "description": "Kidnapping for wrongful confinement",
+              "key_points": ["7 years imprisonment with fine", "Intent to confine", "Secret confinement"]
+            },
+            "section_259": {
+              "title": "Kidnapping or abducting in order to subject person to grievous hurt, slavery, etc.",
+              "description": "Kidnapping for exploitation",
+              "key_points": ["10 years imprisonment with fine", "Grievous hurt, slavery, etc.", "Exploitation purpose"]
+            },
+            "section_260": {
+              "title": "Kidnapping or abducting woman to compel marriage, etc.",
+              "description": "Kidnapping for forced marriage",
+              "key_points": ["10 years imprisonment with fine", "Compel marriage or illicit intercourse", "Woman victim"]
+            },
+            "section_261": {
+              "title": "Kidnapping or abducting minor",
+              "description": "Kidnapping of children",
+              "key_points": ["7 years imprisonment with fine", "Minor under 18 years", "Enhanced protection for minors"]
+            },
+            "section_262": {
+              "title": "Selling minor for purposes of prostitution, etc.",
+              "description": "Trafficking of minors",
+              "key_points": ["10 years to life imprisonment with fine", "Prostitution, illicit intercourse", "Commercial sexual exploitation"]
+            },
+            "section_263": {
+              "title": "Buying minor for purposes of prostitution, etc.",
+              "description": "Purchasing minors for exploitation",
+              "key_points": ["10 years to life imprisonment with fine", "Buying for sexual exploitation", "Demand side prosecution"]
+            },
+            "section_264": {
+              "title": "Importation of girl from foreign country",
+              "description": "International trafficking",
+              "key_points": ["10 years imprisonment with fine", "Under 21 years", "Illicit intercourse purpose"]
+            },
+            "section_265": {
+              "title": "Habitual kidnapping",
+              "description": "Repeat offenders",
+              "key_points": ["Life imprisonment", "Habitual offender", "Enhanced punishment"]
+            },
+            "section_266": {
+              "title": "Trafficking of persons",
+              "description": "Modern slavery and trafficking",
+              "key_points": [
+                "7-10 years imprisonment with fine Rs. 1-10 lakh",
+                "Recruitment, transportation, harbouring",
+                "Exploitation purpose",
+                "Enhanced punishment for minors"
+              ]
+            }
+          }
+        },
+        "wrongful_restraint": {
+          "title": "Of Wrongful Restraint and Wrongful Confinement",
+          "sections": "274-280",
+          "sections_detail": {
+            "section_274": {
+              "title": "Wrongful restraint",
+              "description": "Voluntarily obstructing person's movement",
+              "key_points": ["1 month imprisonment or fine up to Rs. 2500 or both", "Obstructing free movement", "Without legal justification"]
+            },
+            "section_275": {
+              "title": "Wrongful confinement",
+              "description": "Wrongfully confining person",
+              "key_points": ["1 year imprisonment or fine up to Rs. 5000 or both", "Preventing from proceeding", "Beyond certain circumscribing limits"]
+            },
+            "section_276": {
+              "title": "Wrongful confinement for three or more days",
+              "description": "Extended wrongful confinement",
+              "key_points": ["2 years imprisonment with fine", "Three or more days", "Enhanced punishment for duration"]
+            },
+            "section_277": {
+              "title": "Wrongful confinement for ten or more days",
+              "description": "Long-term wrongful confinement",
+              "key_points": ["3 years imprisonment with fine", "Ten or more days", "Further enhanced punishment"]
+            },
+            "section_278": {
+              "title": "Wrongful confinement in secret",
+              "description": "Secret confinement",
+              "key_points": ["2 years imprisonment in addition to base punishment", "Secret place", "Aggravated form"]
+            }
+          }
+        },
+        "criminal_force_assault": {
+          "title": "Of Criminal Force and Assault",
+          "sections": "281-297",
+          "sections_detail": {
+            "section_281": {
+              "title": "Assault",
+              "description": "Making gesture or preparation to use criminal force",
+              "key_points": ["2 years imprisonment or fine up to Rs. 1000 or both", "Gesture or preparation", "Apprehension of force"]
+            },
+            "section_282": {
+              "title": "Criminal force",
+              "description": "Intentionally using force without consent",
+              "key_points": ["3 months imprisonment or fine up to Rs. 1500 or both", "Use of force", "Without consent"]
+            },
+            "section_283": {
+              "title": "Punishment for criminal force",
+              "description": "General punishment for criminal force",
+              "key_points": ["3 months imprisonment or fine up to Rs. 1500 or both", "Basic criminal force", "Without aggravating circumstances"]
+            },
+            "section_284": {
+              "title": "Assault or criminal force to deter public servant from discharge of duty",
+              "description": "Assault on public servant",
+              "key_points": ["2 years imprisonment or fine or both", "Public servant", "Deterring from duty"]
+            },
+            "section_285": {
+              "title": "Assault or criminal force to woman with intent to outrage her modesty",
+              "description": "Outraging modesty through force",
+              "key_points": ["1-5 years imprisonment with fine", "Intent to outrage modesty", "Assault or criminal force on woman"]
+            },
+            "section_286": {
+              "title": "Assault or criminal force with intent to dishonour person",
+              "description": "Force with intent to dishonor",
+              "key_points": ["2 years imprisonment or fine or both", "Intent to dishonor", "Otherwise than on grave provocation"]
+            }
+          }
+        }
+      }
+    },
+    "chapter_16": {
+      "title": "Of Offences Relating to Marriage",
+      "sections": "298-307",
+      "sections_detail": {
+        "section_298": {
+          "title": "Bigamy",
+          "description": "Marrying while spouse is living",
+          "key_points": ["7 years imprisonment with fine", "Second marriage during subsistence of first", "Both marriages valid"]
+        },
+        "section_299": {
+          "title": "Marrying after concealing former marriage",
+          "description": "Concealing previous marriage",
+          "key_points": ["10 years imprisonment with fine", "Concealing fact of former marriage", "Deceiving subsequent spouse"]
+        },
+        "section_300": {
+          "title": "Marriage ceremony fraudulently gone through without lawful marriage",
+          "description": "Fraudulent marriage ceremony",
+          "key_points": ["7 years imprisonment with fine", "Going through marriage ceremony", "Knowing it's not lawful marriage"]
+        },
+        "section_301": {
+          "title": "Dishonestly or fraudulently going through marriage ceremony",
+          "description": "Fraudulent participation in marriage",
+          "key_points": ["7 years imprisonment with fine", "Dishonest or fraudulent participation", "In marriage ceremony"]
+        },
+        "section_302": {
+          "title": "Cohabitation caused by deceit",
+          "description": "Deceitful cohabitation",
+          "key_points": ["10 years imprisonment with fine", "Deceit about marriage", "Causing cohabitation"]
+        },
+        "section_303": {
+          "title": "Marrying minor",
+          "description": "Child marriage by adult",
+          "key_points": ["2 years imprisonment or fine up to Rs. 1 lakh or both", "Marrying person under 18", "Adult responsibility"]
+        },
+        "section_304": {
+          "title": "Promoting or permitting marriage of minor",
+          "description": "Facilitating child marriage",
+          "key_points": ["2 years imprisonment or fine up to Rs. 1 lakh or both", "Promoting child marriage", "Guardian or person in charge"]
+        }
+      }
+    },
+    "chapter_17": {
+      "title": "Of Defamation",
+      "sections": "305-320",
+      "sections_detail": {
+        "section_305": {
+          "title": "Defamation",
+          "description": "Imputation lowering reputation",
+          "key_points": ["2 years imprisonment or fine or both", "Imputation concerning person", "Lowering reputation in estimation of others"]
+        },
+        "section_306": {
+          "title": "Punishment for defamation",
+          "description": "General punishment for defamation",
+          "key_points": ["2 years imprisonment or fine or both", "Simple imprisonment", "Defamatory imputation"]
+        },
+        "section_307": {
+          "title": "Printing or engraving matter knowing it to be defamatory",
+          "description": "Publishing defamatory content",
+          "key_points": ["2 years imprisonment or fine or both", "Printing or engraving", "Knowledge of defamatory nature"]
+        },
+        "section_308": {
+          "title": "Sale of printed or engraved substance containing defamatory matter",
+          "description": "Selling defamatory material",
+          "key_points": ["2 years imprisonment or fine or both", "Sale of defamatory matter", "Knowledge of content"]
+        }
+      }
+    },
+    "chapter_18": {
+      "title": "Of Criminal Intimidation, Insult and Annoyance",
+      "sections": "309-321",
+      "sections_detail": {
+        "section_309": {
+          "title": "Criminal intimidation",
+          "description": "Threatening to cause injury to person, reputation or property",
+          "key_points": ["2 years imprisonment or fine or both", "Threat to injure", "Person, reputation, or property"]
+        },
+        "section_310": {
+          "title": "Punishment for criminal intimidation",
+          "description": "General punishment for criminal intimidation",
+          "key_points": ["2 years imprisonment or fine or both", "Threatening with injury", "Causing alarm"]
+        },
+        "section_311": {
+          "title": "Criminal intimidation by anonymous communication",
+          "description": "Anonymous threatening",
+          "key_points": ["2 years imprisonment with fine", "Anonymous communication", "Enhanced punishment"]
+        },
+        "section_312": {
+          "title": "Insult intended to provoke breach of peace",
+          "description": "Insulting to provoke disorder",
+          "key_points": ["2 years imprisonment or fine or both", "Intentional insult", "Likely to provoke breach of peace"]
+        },
+        "section_313": {
+          "title": "Act caused by inducing person to believe that he will be rendered an object of Divine displeasure",
+          "description": "Religious intimidation",
+          "key_points": ["1 year imprisonment or fine or both", "Divine displeasure threat", "Religious coercion"]
+        }
+      }
+    },
+    "chapter_19": {
+      "title": "Of Theft, Extortion, Robbery and Dacoity",
+      "sections": "314-346",
+      "sections_detail": {
+        "section_314": {
+          "title": "Theft",
+          "description": "Dishonestly taking movable property",
+          "key_points": ["3 years imprisonment or fine or both", "Dishonest intention", "Taking movable property", "Without consent"]
+        },
+        "section_315": {
+          "title": "Punishment for theft",
+          "description": "General punishment for theft",
+          "key_points": ["3 years imprisonment or fine or both", "Basic theft offence", "Movable property"]
+        },
+        "section_316": {
+          "title": "Theft in dwelling house, etc.",
+          "description": "Theft from dwelling",
+          "key_points": ["7 years imprisonment with fine", "Dwelling house, vessel, vehicle", "Enhanced punishment"]
+        },
+        "section_317": {
+          "title": "Theft by clerk or servant of property in possession of master",
+          "description": "Breach of trust by employee",
+          "key_points": ["7 years imprisonment with fine", "Clerk or servant", "Master's property"]
+        },
+        "section_318": {
+          "title": "Theft after preparation made for causing death, hurt or restraint",
+          "description": "Aggravated theft with violence preparation",
+          "key_points": ["10 years rigorous imprisonment with fine", "Preparation for violence", "Aggravated form"]
+        },
+        "section_319": {
+          "title": "Extortion",
+          "description": "Intentionally putting person in fear to deliver property",
+          "key_points": ["3 years imprisonment or fine or both", "Putting in fear of injury", "To induce delivery of property"]
+        },
+        "section_320": {
+          "title": "Punishment for extortion",
+          "description": "General punishment for extortion",
+          "key_points": ["3 years imprisonment or fine or both", "Basic extortion", "Fear-based property taking"]
+        },
+        "section_321": {
+          "title": "Robbery",
+          "description": "Theft with violence or fear",
+          "key_points": ["10 years rigorous imprisonment with fine", "Theft with violence", "Or putting in fear of violence"]
+        },
+        "section_322": {
+          "title": "Dacoity",
+          "description": "Robbery by five or more persons",
+          "key_points": ["Life imprisonment or 10 years rigorous imprisonment with fine", "Five or more persons", "Conjointly committing robbery"]
+        },
+        "section_323": {
+          "title": "Punishment for dacoity",
+          "description": "General punishment for dacoity",
+          "key_points": ["Life imprisonment or 10 years rigorous imprisonment with fine", "Group robbery", "Enhanced punishment"]
+        },
+        "section_324": {
+          "title": "Preparation to commit dacoity",
+          "description": "Preparing for group robbery",
+          "key_points": ["10 years rigorous imprisonment with fine", "Making preparation", "For committing dacoity"]
+        },
+        "section_325": {
+          "title": "Being member of gang of dacoits",
+          "description": "Gang membership",
+          "key_points": ["Life imprisonment or 10 years rigorous imprisonment with fine", "Habitually committing dacoity", "Gang membership"]
+        }
+      }
+    },
+    "chapter_20": {
+      "title": "Of the Receiving of Stolen Property and Other Offences Relating to Stolen Property",
+      "sections": "347-358",
+      "sections_detail": {
+        "section_347": {
+          "title": "Receiving stolen property",
+          "description": "Dishonestly receiving or retaining stolen property",
+          "key_points": ["3 years imprisonment or fine or both", "Knowledge or reason to believe property is stolen", "Dishonest receiving or retaining"]
+        },
+        "section_348": {
+          "title": "Punishment for receiving stolen property",
+          "description": "General punishment for receiving stolen goods",
+          "key_points": ["3 years imprisonment or fine or both", "Receiving stolen property", "Knowledge requirement"]
+        },
+        "section_349": {
+          "title": "Receiving stolen property habitually",
+          "description": "Habitual receivers",
+          "key_points": ["7 years imprisonment with fine", "Habitually receiving", "Professional receivers"]
+        },
+        "section_350": {
+          "title": "Receiving stolen property knowing that gang of dacoits committed the theft",
+          "description": "Receiving property from dacoits",
+          "key_points": ["Life imprisonment or 10 years rigorous imprisonment with fine", "Knowing dacoity connection", "Enhanced punishment"]
+        },
+        "section_351": {
+          "title": "Dishonest misappropriation of property",
+          "description": "Converting property to own use",
+          "key_points": ["2 years imprisonment or fine or both", "Dishonest misappropriation", "Converting to own use"]
+        },
+        "section_352": {
+          "title": "Punishment for dishonest misappropriation of property",
+          "description": "General punishment for misappropriation",
+          "key_points": ["2 years imprisonment or fine or both", "Basic misappropriation", "Property conversion"]
+        },
+        "section_353": {
+          "title": "Criminal breach of trust",
+          "description": "Dishonestly using or disposing entrusted property",
+          "key_points": ["3 years imprisonment or fine or both", "Entrusted property", "Dishonest use or disposal"]
+        },
+        "section_354": {
+          "title": "Punishment for criminal breach of trust",
+          "description": "General punishment for breach of trust",
+          "key_points": ["3 years imprisonment or fine or both", "Basic breach of trust", "Entrusted property"]
+        },
+        "section_355": {
+          "title": "Criminal breach of trust by carrier, etc.",
+          "description": "Breach of trust by carriers and agents",
+          "key_points": ["7 years imprisonment with fine", "Carrier, wharfinger, etc.", "Professional trust"]
+        },
+        "section_356": {
+          "title": "Criminal breach of trust by clerk or servant",
+          "description": "Breach of trust by employees",
+          "key_points": ["7 years imprisonment with fine", "Clerk or servant", "Employment-based trust"]
+        },
+        "section_357": {
+          "title": "Cheating",
+          "description": "Dishonestly inducing person to deliver property",
+          "key_points": ["1 year imprisonment or fine or both", "Deception", "Inducing delivery of property"]
+        },
+        "section_358": {
+          "title": "Punishment for cheating",
+          "description": "General punishment for cheating",
+          "key_points": ["1 year imprisonment or fine or both", "Basic cheating", "Fraudulent deception"]
+        }
+      }
+    }
+  },
+  "key_changes_from_ipc": [
+    "Introduction of community service as punishment",
+    "Enhanced punishment for mob lynching",
+    "Specific provisions for terrorism-related offences", 
+    "Updated definition of rape with detailed consent provisions",
+    "New offences like stalking, voyeurism added",
+    "Enhanced punishment for crimes against women and children",
+    "Organized crime provisions",
+    "Digital/cyber crime considerations",
+    "Trafficking of persons as separate offence",
+    "Enhanced punishment for repeat offenders"
+  ],
+  "important_definitions": {
+    "dishonestly": "Wrongful gain to oneself or wrongful loss to another",
+    "fraudulently": "With intent to defraud",
+    "good_faith": "Due care and attention",
+    "injury": "Illegally causing harm to person, reputation or property",
+    "wrongful_gain": "Gain by unlawful means of property to which person is not legally entitled",
+    "wrongful_loss": "Loss by unlawful means of property to which person is legally entitled",
+    "movable_property": "Corporeal property of every description except land and things attached to earth",
+    "public_servant": "Includes government officials, judges, police officers, military personnel, etc.",
+    "document": "Any matter expressed or described upon any substance by means of letters, figures or marks",
+    "valuable_security": "Document evidencing legal right to payment of money or transferable interest",
+    "will": "Legal declaration of intention of testator with respect to property after death"
+  },
+  "punishment_matrix": {
+    "death_penalty": {
+      "offences": [
+        "Waging war against Government of India (Section 55)",
+        "Abetment of mutiny if mutiny is committed (Section 72)", 
+        "Murder in certain circumstances (Section 193)",
+        "Gang rape (Section 241)",
+        "Rape of woman under 16 years (Section 242)"
+      ],
+      "conditions": "Only in rarest of rare cases as per judicial precedent"
+    },
+    "life_imprisonment": {
+      "offences": [
+        "Waging war against Government of India (Section 55)",
+        "Murder (Section 193)",
+        "Kidnapping for ransom (Section 257)",
+        "Dacoity (Section 322)",
+        "Trafficking of persons (enhanced cases)"
+      ],
+      "definition": "Imprisonment for remainder of natural life"
+    },
+    "rigorous_imprisonment": {
+      "description": "Hard labor during imprisonment",
+      "offences": [
+        "Rape (Section 238)",
+        "Gang rape (Section 241)",
+        "Robbery (Section 321)",
+        "Dacoity (Section 322)"
+      ]
+    },
+    "simple_imprisonment": {
+      "description": "Imprisonment without hard labor",
+      "offences": [
+        "Defamation (Section 305)",
+        "Criminal intimidation (Section 309)",
+        "Theft (Section 314)"
+      ]
+    },
+    "fine": {
+      "description": "Monetary penalty",
+      "range": "No limit unless specified in particular section",
+      "default_imprisonment": "In case of default, simple imprisonment as specified"
+    },
+    "community_service": {
+      "description": "New punishment introduced in BNS",
+      "purpose": "Reformative justice and social contribution",
+      "applicability": "Court discretion for suitable offences"
+    }
+  },
+  "victim_compensation": {
+    "sections_with_compensation": [
+      "Section 241 (Gang rape)",
+      "Section 266 (Trafficking of persons)"
+    ],
+    "purpose": "Rehabilitation and support of victims",
+    "funding": "From fine collected from convicts"
+  },
+  "special_provisions": {
+    "women_and_children": {
+      "enhanced_protection": [
+        "Stricter punishment for sexual offences",
+        "Specific provisions for stalking and voyeurism", 
+        "Enhanced punishment for trafficking of minors",
+        "Protection from domestic violence provisions"
+      ]
+    },
+    "public_servants": {
+      "accountability": [
+        "Enhanced punishment when public servant commits crime",
+        "Specific provisions for corruption",
+        "Abuse of official position",
+        "Breach of official duty"
+      ]
+    },
+    "organized_crime": [
+      "Gang-related offences",
+      "Habitual offenders",
+      "Criminal conspiracy provisions",
+      "Enhanced punishment for group crimes"
+    ],
+    "cyber_crimes": [
+      "Digital considerations in existing offences",
+      "Electronic evidence provisions",
+      "Online harassment and stalking",
+      "Digital fraud and cheating"
+    ]
+  },
+  "procedural_aspects": {
+    "investigation": "Governed by Bharatiya Nagarik Suraksha Sanhita (Criminal Procedure)",
+    "evidence": "Governed by Bharatiya Sakshya Adhiniyam (Evidence Act)",
+    "trial": "Fair trial principles maintained",
+    "appeal": "Right to appeal preserved in all cases"
+  },
+  "territorial_jurisdiction": {
+    "applicability": "Whole of India including Union Territories",
+    "extraterritorial_application": [
+      "Citizens of India outside India for certain offences",
+      "Offences committed on ships and aircraft registered in India",
+      "Offences affecting Indian national security"
+    ]
+  },
+  "enforcement_agencies": [
+    "State Police",
+    "Central Bureau of Investigation (CBI)",
+    "National Investigation Agency (NIA)",
+    "Enforcement Directorate (ED)",
+    "Income Tax Department",
+    "Customs and Central Excise",
+    "Other specialized agencies as per law"
+  ],
+  "constitutional_compliance": {
+    "fundamental_rights": "All provisions must comply with constitutional rights",
+    "due_process": "Fair trial and natural justice principles",
+    "equality": "Equal treatment before law",
+    "prohibition_of_discrimination": "No discrimination on grounds of religion, race, caste, sex, place of birth"
+  },
+  "implementation_guidelines": {
+    "training_requirements": "Police and judicial officers training on new provisions",
+    "victim_support_services": "Establishment of victim compensation funds",
+    "awareness_programs": "Public awareness about new law provisions",
+    "monitoring_mechanism": "Regular review of implementation effectiveness"
+  }
+}
