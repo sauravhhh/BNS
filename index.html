@@ -217,6 +217,24 @@
       color: var(--muted);
       margin: 14px 0 2px;
     }
+    .share-btn {
+      display: block;
+      width: 100%;
+      margin-top: 16px;
+      padding: 12px 0;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: inherit;
+      color: var(--text);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+    }
+    .share-btn:hover { background: var(--hover); border-color: var(--border-strong); transform: translateY(-1px); }
+    .share-btn:active { transform: translateY(0); }
     footer {
       margin-top: auto;
       padding: 28px 16px;
@@ -313,7 +331,30 @@
           </div>
           <p class="sec-desc">${esc(s.description)}</p>
           ${points.length ? `<div class="points-label">Key points</div><ul class="sec-points">${points.map(p => `<li>${esc(p)}</li>`).join("")}</ul>` : ""}
+          <button class="share-btn" id="shareBtn" onclick="shareResult()">Share result</button>
         </div>`;
+      lastResult = { num, viaIpc, title: s.title, chapter: s.chapter,
+                     desc: s.description || "", points };
+    }
+
+    let lastResult = null;
+
+    function shareResult() {
+      if (!lastResult) return;
+      const r = lastResult;
+      let text = "Nyaya - BNS Section " + r.num + ": " + r.title;
+      if (r.viaIpc) text += " (IPC " + r.viaIpc + ")";
+      text += "\n" + r.desc;
+      if (r.points.length) text += "\n" + r.points.map(pt => "- " + pt).join("\n");
+      text += "\nhttps://sauravhhh.github.io/Nyaya/";
+      if (navigator.share) {
+        navigator.share({ title: "Nyaya - Section " + r.num, text: text }).catch(() => {});
+      } else if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+          const b = document.getElementById("shareBtn");
+          if (b) { const t = b.textContent; b.textContent = "Copied to clipboard"; setTimeout(() => b.textContent = t, 1600); }
+        }).catch(() => {});
+      }
     }
 
     function searchNyaya() {
