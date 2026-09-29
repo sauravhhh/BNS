@@ -265,7 +265,9 @@
     let sections = {};   // "103" -> {title, description, key_points, chapter}
     let dataLoaded = false;
 
-    fetch("bns.json")
+    // Bump DATA_VERSION whenever bns.json changes so browsers fetch the new file
+    const DATA_VERSION = "20260929";
+    fetch("bns.json?v=" + DATA_VERSION)
       .then((r) => r.json())
       .then((data) => {
         for (const [ck, ch] of Object.entries(data.chapters || {})) {
