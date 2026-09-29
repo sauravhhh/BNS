@@ -193,7 +193,6 @@
       border: 1px solid var(--border);
       color: var(--text);
     }
-    .chip.ipc { background: #111111; border-color: #111111; color: #ffffff; }
     .sec-desc {
       font-size: 14.5px;
       line-height: 1.65;
@@ -218,7 +217,10 @@
       margin: 14px 0 2px;
     }
     .share-btn {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
       width: 100%;
       margin-top: 16px;
       padding: 12px 0;
@@ -233,6 +235,7 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
       transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
     }
+    .share-icon { width: 17px; height: 17px; flex-shrink: 0; }
     .share-btn:hover { background: var(--hover); border-color: var(--border-strong); transform: translateY(-1px); }
     .share-btn:active { transform: translateY(0); }
     .rel-card {
@@ -284,7 +287,7 @@
       <button id="clearBtn" type="button">Clear</button>
       <button id="searchBtn" type="button">Search</button>
     </div>
-    <p class="hint">Type a BNS section number, or an old IPC number like <code>IPC 302</code> to find its BNS equivalent.</p>
+    <p class="hint">Type a BNS section number from 1 to 358.</p>
   </div>
 
   <div id="error"></div>
@@ -293,9 +296,6 @@
   <footer>Made with &hearts; by sauravhhh</footer>
 
   <script>
-    // IPC number -> BNS section, built from the dataset's ipc_equivalent fields
-    let ipcToBns = {};
-
     let sections = {};   // "103" -> {title, description, key_points, chapter}
     let dataLoaded = false;
 
@@ -309,7 +309,6 @@
           for (const [sk, s] of Object.entries(ch.sections_detail || {})) {
             const num = sk.replace("section_", "");
             sections[num] = { ...s, chapter: chapterTitle };
-            if (s.ipc_equivalent) ipcToBns[String(s.ipc_equivalent).toUpperCase()] = num;
           }
         }
         dataLoaded = true;
@@ -334,7 +333,7 @@
       return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
     }
 
-    function renderSection(num, viaIpc) {
+    function renderSection(num) {
       const s = sections[num];
       const points = (s.key_points || []).filter(Boolean);
       results.innerHTML = `
@@ -343,13 +342,12 @@
           <div class="sec-title">${esc(s.title)}</div>
           <div class="chip-row">
             <span class="chip">${esc(s.chapter)}</span>
-            ${viaIpc ? `<span class="chip ipc">IPC ${esc(viaIpc)} &rarr; BNS ${esc(num)}</span>` : ""}
           </div>
           <p class="sec-desc">${esc(s.description)}</p>
           ${points.length ? `<div class="points-label">Key points</div><ul class="sec-points">${points.map(p => `<li>${esc(p)}</li>`).join("")}</ul>` : ""}
-          <button class="share-btn" id="shareBtn" onclick="shareResult()">Share result</button>
+          <button class="share-btn" id="shareBtn" onclick="shareResult()"><svg class="share-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 10.5l6.8-4M8.6 13.5l6.8 4"/></svg><span id="shareBtnText">Share result</span></button>
         </div>`;
-      lastResult = { num, viaIpc, title: s.title, chapter: s.chapter,
+      lastResult = { num, title: s.title, chapter: s.chapter,
                      desc: s.description || "", points };
     }
 
@@ -359,7 +357,6 @@
       if (!lastResult) return;
       const r = lastResult;
       let text = "Nyaya - BNS Section " + r.num + ": " + r.title;
-      if (r.viaIpc) text += " (IPC " + r.viaIpc + ")";
       text += "\n" + r.desc;
       if (r.points.length) text += "\n" + r.points.map(pt => "- " + pt).join("\n");
       text += "\nhttps://sauravhhh.github.io/Nyaya/";
@@ -367,8 +364,8 @@
         navigator.share({ title: "Nyaya - Section " + r.num, text: text }).catch(() => {});
       } else if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(text).then(() => {
-          const b = document.getElementById("shareBtn");
-          if (b) { const t = b.textContent; b.textContent = "Copied to clipboard"; setTimeout(() => b.textContent = t, 1600); }
+          const t = document.getElementById("shareBtnText");
+          if (t) { const prev = t.textContent; t.textContent = "Copied to clipboard"; setTimeout(() => t.textContent = prev, 1600); }
         }).catch(() => {});
       }
     }
@@ -401,7 +398,7 @@
         `<div class="points-label">Related sections (${hits.length})</div>` +
         hits.slice(0, 12).map(h => {
           const s = sections[h.num];
-          return `<div class="rel-card" onclick="renderSection('${h.num}', null)" role="button" tabindex="0" onkeydown="if(event.key==='Enter')renderSection('${h.num}',null)">` +
+          return `<div class="rel-card" onclick="renderSection('${h.num}')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')renderSection('${h.num}')">` +
             `<div class="rel-no">Section ${esc(h.num)}</div>` +
             `<div class="rel-title">${esc(s.title)}</div>` +
             `<div class="rel-ch">${esc(s.chapter)}</div></div>`;
@@ -415,19 +412,10 @@
       if (!q) { errorDiv.textContent = "Please enter a section number."; return; }
       if (!dataLoaded) { errorDiv.textContent = "Database not loaded. Please try again in a moment."; return; }
 
-      const ipcMatch = q.match(/ipc\s*([0-9]+[a-zA-Z]?)/i);
-      if (ipcMatch) {
-        const ipcNo = ipcMatch[1].toUpperCase();
-        const bnsNo = ipcToBns[ipcNo];
-        if (bnsNo && sections[bnsNo]) { renderSection(bnsNo, ipcNo); return; }
-        errorDiv.textContent = `No BNS equivalent found for IPC ${esc(ipcNo)}. Try a BNS section number instead.`;
-        return;
-      }
-
       const digits = q.match(/\d+/);
       if (digits) {
         const num = String(parseInt(digits[0], 10));
-        if (sections[num]) { renderSection(num, null); return; }
+        if (sections[num]) { renderSection(num); return; }
         if (!/[a-zA-Z]/.test(q)) { errorDiv.textContent = `No BNS section found for "${esc(q)}". Sections run from 1 to 358.`; return; }
       }
       keywordSearch(q);
