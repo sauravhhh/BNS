@@ -3,202 +3,282 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Bharatiya Nyaya Sanhita - Section Search</title>
+  <title>Nyaya — Bharatiya Nyaya Sanhita Search</title>
+  <link rel="icon" type="image/svg+xml" href="icon.svg" />
   <style>
-    html { box-sizing: border-box; }
-    *, *:before, *:after { box-sizing: inherit; }
+    :root {
+      --bg: #fafafa;
+      --surface: #ffffff;
+      --text: #111111;
+      --muted: #6b7280;
+      --border: #e8e8e8;
+      --border-strong: #d1d5db;
+      --hover: #f5f5f5;
+    }
+    * { box-sizing: border-box; }
     body {
-      font-family: 'Georgia', 'Times New Roman', serif;
-      background: linear-gradient(120deg, #f9f5ee 0%, #efe0c5 70%, #d3c1a3 100%);
-      color: #452715;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       margin: 0;
-      padding: 1rem 1rem 4rem 1rem;
-      min-height: 100vh;
+      padding: 48px 20px 0;
+      background: var(--bg);
+      color: var(--text);
       display: flex;
       flex-direction: column;
       align-items: center;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
     }
-    h1 {
-      margin-top: 1rem;
-      font-size: 2.25rem;
-      color: #5b3423;
-      font-weight: bold;
-      letter-spacing: 0.04em;
-      text-shadow: 0 1px 8px #f2dfc1;
-      text-align: center;
-      line-height: 1.1;
-      margin-bottom: 0.4rem;
-    }
-    .container {
-      background: #fff8e4;
-      border: 2px solid #bba76a3b;
-      border-radius: 12px;
-      box-shadow: 0 3px 16px rgba(107, 92, 45, 0.24);
-      max-width: 480px;
-      width: 100%;
-      padding: 1.6rem 1.3rem 1.3rem 1.3rem;
-      margin-bottom: 1rem;
-    }
-    input[type="text"] {
-      width: 100%;
-      padding: 0.75rem 1.2rem;
-      border-radius: 8px;
-      border: 1.5px solid #ad996864;
-      font-size: 1.12rem;
-      font-family: 'Georgia', serif;
-      color: #422c14;
-      margin-bottom: 1.1rem;
-      outline-offset: 1px;
-      background-color: #faf3db;
-      letter-spacing: 0.02em;
-    }
-    input[type="text"]:focus {
-      border-color: #947c3a;
-      background-color: #fff8db;
-      outline: 2px solid #a6812a;
-    }
-    .button-row {
+    .brand {
       display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 6px;
+    }
+    .brand .logo {
+      width: 46px;
+      height: 46px;
+      border-radius: 13px;
+      background: #111111;
+      display: flex;
+      align-items: center;
       justify-content: center;
-      gap: 0.8rem;
-      margin-bottom: 1rem;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
+      flex-shrink: 0;
     }
-    button {
-      flex: 1 1 120px;
-      padding: 0.6rem 0;
-      border: none;
-      border-radius: 8px;
+    .brand .logo svg { width: 28px; height: 28px; }
+    h1 {
+      margin: 0;
+      font-size: 26px;
+      font-weight: 650;
+      letter-spacing: -0.02em;
+    }
+    .sub {
+      margin: 0 0 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    .card {
+      width: 100%;
+      max-width: 440px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+    }
+    label {
+      display: block;
+      font-size: 12px;
       font-weight: 600;
-      font-size: 1rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 8px 2px;
+    }
+    #queryInput {
+      width: 100%;
+      padding: 13px 14px;
+      font-size: 15px;
+      font-family: inherit;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--bg);
+      color: var(--text);
+      outline: none;
+      margin-bottom: 12px;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+    #queryInput:focus {
+      border-color: #111111;
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+    }
+    .button-row { display: flex; gap: 10px; }
+    #searchBtn {
+      flex: 2;
+      padding: 13px 0;
+      font-size: 15px;
+      font-weight: 600;
+      font-family: inherit;
+      color: #ffffff;
+      background: #111111;
+      border: none;
+      border-radius: 14px;
       cursor: pointer;
-      background-color: #7b5932;
-      color: #fff;
-      font-family: 'Georgia', serif;
-      letter-spacing: 0.02em;
-      transition: background-color 0.2s;
-      max-width: 160px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
     }
-    button:active {
-      background-color: #5a421a;
-    }
+    #searchBtn:hover { background: #2b2b2b; transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16); }
+    #searchBtn:active { transform: translateY(0); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10); }
     #clearBtn {
-      background-color: #eddebd;
-      color: #6a5121;
+      flex: 1;
+      padding: 13px 0;
+      font-size: 15px;
+      font-weight: 600;
+      font-family: inherit;
+      color: var(--text);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, border-color 0.15s ease;
     }
-    #clearBtn:active {
-      background-color: #beaa71;
-      color: #fff;
+    #clearBtn:hover { background: var(--hover); border-color: var(--border-strong); transform: translateY(-1px); }
+    #clearBtn:active { transform: translateY(0); }
+    .hint {
+      margin: 12px 2px 0;
+      font-size: 12.5px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .hint code {
+      font-family: inherit;
+      background: var(--hover);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1px 6px;
+      font-size: 12px;
+      color: var(--text);
     }
     #error {
-      color: #a92828;
-      font-weight: 600;
+      color: #b91c1c;
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 12px;
+      font-weight: 500;
+      font-size: 14px;
+      width: 100%;
+      max-width: 440px;
+      margin: 16px auto 0;
+      padding: 12px 16px;
       text-align: center;
-      margin-bottom: 0.9rem;
-      font-family: 'Georgia', serif;
     }
-    .section-box {
-      border-left: 5px solid #bcaa6b;
-      background-color: #fffdebcc;
-      box-shadow: 2px 2px 7px #bda96144;
-      padding: 1rem 1.1rem 0.7rem 1.2rem;
-      border-radius: 9px;
-      margin-bottom: 1.1rem;
-      line-height: 1.48;
-      font-size: 1rem;
-      color: #423219;
-      word-wrap: break-word;
-      font-family: 'Georgia', serif;
+    #error:empty { display: none; }
+    .result-box {
+      width: 100%;
+      max-width: 440px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+      margin: 16px auto 0;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+      animation: fadeIn 0.36s;
     }
-    .section-title {
-      font-weight: 800;
-      font-size: 1.17rem;
-      margin-bottom: 0.28rem;
-      color: #7a5f22;
-      letter-spacing: 0.035em;
-      font-family: 'Georgia', serif;
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .sec-no {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
     }
-    .section-header {
-      font-weight: 700;
-      font-size: 1.02rem;
-      margin-bottom: 0.34rem;
-      color: #654d19;
-      font-family: 'Georgia', serif;
+    .sec-title {
+      font-size: 20px;
+      font-weight: 650;
+      letter-spacing: -0.01em;
+      margin-bottom: 10px;
+      line-height: 1.3;
     }
-    .section-description {
-      font-weight: 400;
-      font-size: 0.98rem;
-      color: #59492c;
-      text-align: justify;
-      margin-bottom: 0.4rem;
+    .chip-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+    .chip {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: var(--hover);
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+    .chip.ipc { background: #111111; border-color: #111111; color: #ffffff; }
+    .sec-desc {
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: #333333;
+      margin: 0 0 6px;
       white-space: pre-wrap;
-      font-family: 'Georgia', serif;
     }
-    .section-points {
-      margin-left: 1.25rem;
-      list-style-type: disc;
-      color: #6a5131;
-      font-family: 'Georgia', serif;
-      font-size: 0.95rem;
+    .sec-points {
+      margin: 10px 0 0;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #444444;
     }
-    .section-points li {
-      margin-bottom: 0.25rem;
+    .sec-points li { margin-bottom: 6px; }
+    .points-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 14px 0 2px;
     }
     footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
+      margin-top: auto;
+      padding: 28px 16px;
+      font-size: 12.5px;
+      color: var(--muted);
+      user-select: none;
       text-align: center;
-      padding: 0.85rem 0;
-      background: transparent;
-      font-size: 1rem;
-      color: #000;
-      letter-spacing: 0.06em;
-      font-family: 'Georgia', serif;
-      z-index: 9999;
-    }
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 1.6rem;
-      }
-      .container {
-        width: 90vw;
-        padding: 1.2rem 1rem 1rem 1rem;
-      }
-      button {
-        font-size: 0.95rem;
-        max-width: 130px;
-        padding: 0.5rem 0;
-      }
-      .section-title {
-        font-size: 1.05rem;
-      }
-      .section-description, .section-points {
-        font-size: 0.9rem;
-      }
+      width: 100%;
     }
   </style>
 </head>
 <body>
-  <h1>📚 Bharatiya Nyaya Sanhita Section Search</h1>
-  <div class="container">
-    <input id="queryInput" type="text" placeholder="Enter section number (e.g. 106)" autocomplete="off" />
+  <div class="brand">
+    <span class="logo" aria-hidden="true">
+      <svg viewBox="0 0 64 64" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M32 10v44"/>
+        <path d="M16 19h32"/>
+        <path d="M21 19l-7 15a8 8 0 0 0 14 0l-7-15z"/>
+        <path d="M43 19l-7 15a8 8 0 0 0 14 0l-7-15z"/>
+        <path d="M23 54h18"/>
+      </svg>
+    </span>
+    <h1>Nyaya</h1>
+  </div>
+  <p class="sub">Bharatiya Nyaya Sanhita &middot; section search</p>
+
+  <div class="card">
+    <label for="queryInput">Section number</label>
+    <input id="queryInput" type="text" placeholder="e.g. 103" autocomplete="off" />
     <div class="button-row">
       <button id="clearBtn" type="button">Clear</button>
       <button id="searchBtn" type="button">Search</button>
     </div>
-    <div id="error"></div>
-    <div id="results"></div>
+    <p class="hint">Type a BNS section number, or an old IPC number like <code>IPC 302</code> to find its BNS equivalent.</p>
   </div>
-  <footer>Made with ❤️ by Sauravhhh</footer>
+
+  <div id="error"></div>
+  <div id="results"></div>
+
+  <footer>Made with &hearts; by sauravhhh</footer>
+
   <script>
-    let bnsData = {};
+    // IPC number -> BNS section, built from the dataset's ipc_equivalent fields
+    let ipcToBns = {};
+
+    let sections = {};   // "103" -> {title, description, key_points, chapter}
+    let dataLoaded = false;
 
     fetch("bns.json")
       .then((r) => r.json())
       .then((data) => {
-        bnsData = data;
-      });
+        for (const [ck, ch] of Object.entries(data.chapters || {})) {
+          const chapterTitle = ch.title || ck;
+          for (const [sk, s] of Object.entries(ch.sections_detail || {})) {
+            const num = sk.replace("section_", "");
+            sections[num] = { ...s, chapter: chapterTitle };
+            if (s.ipc_equivalent) ipcToBns[String(s.ipc_equivalent).toUpperCase()] = num;
+          }
+        }
+        dataLoaded = true;
+      })
+      .catch(() => { dataLoaded = false; });
 
     const searchBtn = document.getElementById("searchBtn");
     const clearBtn = document.getElementById("clearBtn");
@@ -209,64 +289,56 @@
     function clearAll() {
       queryInput.value = "";
       results.innerHTML = "";
-      errorDiv.innerHTML = "";
+      errorDiv.textContent = "";
       queryInput.focus();
     }
     clearBtn.onclick = clearAll;
 
-    function searchBNS() {
-      errorDiv.textContent = "";
-      results.innerHTML = "";
-      let q = queryInput.value.trim();
-      if (!q) {
-        errorDiv.textContent = "Please enter a section number.";
-        return;
-      }
-      if (!bnsData.chapters) {
-        errorDiv.textContent = "Database not loaded. Please try again later.";
-        return;
-      }
-
-      // Search chapters for section
-      let foundSection = null,
-        chapterTitle = "";
-      outer: for (let chapterKey in bnsData.chapters) {
-        let chapter = bnsData.chapters[chapterKey];
-        let sections = chapter.sections_detail;
-        if (sections && sections["section_" + q]) {
-          foundSection = sections["section_" + q];
-          chapterTitle = chapter.title || chapterKey.replace(/_/g, " ").toUpperCase();
-          break outer;
-        }
-      }
-
-      if (!foundSection) {
-        results.innerHTML = `<div class="section-box">No section found with number ${q}.</div>`;
-        return;
-      }
-
-      results.innerHTML = `
-        <div class="section-box">
-          <div class="section-title">Section ${q}: ${foundSection.title}</div>
-          <div class="section-header">${chapterTitle}</div>
-          <div class="section-description">${foundSection.description}</div>
-          ${
-            foundSection.key_points && foundSection.key_points.length > 0
-              ? `<ul class="section-points">${foundSection.key_points
-                  .map((pt) => `<li>${pt}</li>`)
-                  .join("")}</ul>`
-              : ""
-          }
-        </div>
-      `;
+    function esc(s) {
+      return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
     }
 
-    searchBtn.onclick = searchBNS;
-    queryInput.addEventListener("keyup", (e) => {
-      if (e.key === "Enter") {
-        searchBNS();
+    function renderSection(num, viaIpc) {
+      const s = sections[num];
+      const points = (s.key_points || []).filter(Boolean);
+      results.innerHTML = `
+        <div class="result-box">
+          <div class="sec-no">Section ${esc(num)}</div>
+          <div class="sec-title">${esc(s.title)}</div>
+          <div class="chip-row">
+            <span class="chip">${esc(s.chapter)}</span>
+            ${viaIpc ? `<span class="chip ipc">IPC ${esc(viaIpc)} &rarr; BNS ${esc(num)}</span>` : ""}
+          </div>
+          <p class="sec-desc">${esc(s.description)}</p>
+          ${points.length ? `<div class="points-label">Key points</div><ul class="sec-points">${points.map(p => `<li>${esc(p)}</li>`).join("")}</ul>` : ""}
+        </div>`;
+    }
+
+    function searchNyaya() {
+      errorDiv.textContent = "";
+      results.innerHTML = "";
+      const q = queryInput.value.trim();
+      if (!q) { errorDiv.textContent = "Please enter a section number."; return; }
+      if (!dataLoaded) { errorDiv.textContent = "Database not loaded. Please try again in a moment."; return; }
+
+      const ipcMatch = q.match(/ipc\s*([0-9]+[a-zA-Z]?)/i);
+      if (ipcMatch) {
+        const ipcNo = ipcMatch[1].toUpperCase();
+        const bnsNo = ipcToBns[ipcNo];
+        if (bnsNo && sections[bnsNo]) { renderSection(bnsNo, ipcNo); return; }
+        errorDiv.textContent = `No BNS equivalent found for IPC ${esc(ipcNo)}. Try a BNS section number instead.`;
+        return;
       }
-    });
+
+      const digits = q.match(/\d+/);
+      if (!digits) { errorDiv.textContent = "Please enter a valid section number."; return; }
+      const num = String(parseInt(digits[0], 10));
+      if (sections[num]) { renderSection(num, null); return; }
+      errorDiv.textContent = `No BNS section found for "${esc(q)}". Sections run from 1 to 358.`;
+    }
+
+    searchBtn.onclick = searchNyaya;
+    queryInput.addEventListener("keyup", (e) => { if (e.key === "Enter") searchNyaya(); });
   </script>
 </body>
 </html>
