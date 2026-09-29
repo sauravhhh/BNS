@@ -235,6 +235,22 @@
     }
     .share-btn:hover { background: var(--hover); border-color: var(--border-strong); transform: translateY(-1px); }
     .share-btn:active { transform: translateY(0); }
+    .rel-card {
+      width: 100%;
+      max-width: 440px;
+      margin: 10px auto 0;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+      transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    .rel-card:hover { border-color: var(--border-strong); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07); }
+    .rel-no { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+    .rel-title { font-size: 15.5px; font-weight: 600; margin: 3px 0; letter-spacing: -0.01em; line-height: 1.35; }
+    .rel-ch { font-size: 12.5px; color: var(--muted); }
     footer {
       margin-top: auto;
       padding: 28px 16px;
@@ -357,6 +373,41 @@
       }
     }
 
+    function keywordSearch(q) {
+      const words = q.toLowerCase().split(/[^a-z0-9]+/).filter(w => w.length > 2);
+      if (!words.length) { errorDiv.textContent = "Please enter a valid section number."; return; }
+      const hits = [];
+      for (const num in sections) {
+        const s = sections[num];
+        const title = (s.title || "").toLowerCase();
+        const desc = (s.description || "").toLowerCase();
+        const pts = (s.key_points || []).join(" ").toLowerCase();
+        const ch = (s.chapter || "").toLowerCase();
+        let score = 0, ok = true;
+        for (const w of words) {
+          let ws = 0;
+          if (title.includes(w)) ws += 4;
+          if (desc.includes(w)) ws += 2;
+          if (pts.includes(w)) ws += 1;
+          if (ch.includes(w)) ws += 1;
+          if (!ws) { ok = false; break; }
+          score += ws;
+        }
+        if (ok) hits.push({ num, score });
+      }
+      hits.sort((a, b) => (b.score - a.score) || ((+a.num) - (+b.num)));
+      if (!hits.length) { errorDiv.textContent = `No sections found for "${esc(q)}".`; return; }
+      results.innerHTML =
+        `<div class="points-label">Related sections (${hits.length})</div>` +
+        hits.slice(0, 12).map(h => {
+          const s = sections[h.num];
+          return `<div class="rel-card" onclick="renderSection('${h.num}', null)" role="button" tabindex="0" onkeydown="if(event.key==='Enter')renderSection('${h.num}',null)">` +
+            `<div class="rel-no">Section ${esc(h.num)}</div>` +
+            `<div class="rel-title">${esc(s.title)}</div>` +
+            `<div class="rel-ch">${esc(s.chapter)}</div></div>`;
+        }).join("");
+    }
+
     function searchNyaya() {
       errorDiv.textContent = "";
       results.innerHTML = "";
@@ -374,10 +425,12 @@
       }
 
       const digits = q.match(/\d+/);
-      if (!digits) { errorDiv.textContent = "Please enter a valid section number."; return; }
-      const num = String(parseInt(digits[0], 10));
-      if (sections[num]) { renderSection(num, null); return; }
-      errorDiv.textContent = `No BNS section found for "${esc(q)}". Sections run from 1 to 358.`;
+      if (digits) {
+        const num = String(parseInt(digits[0], 10));
+        if (sections[num]) { renderSection(num, null); return; }
+        if (!/[a-zA-Z]/.test(q)) { errorDiv.textContent = `No BNS section found for "${esc(q)}". Sections run from 1 to 358.`; return; }
+      }
+      keywordSearch(q);
     }
 
     searchBtn.onclick = searchNyaya;
